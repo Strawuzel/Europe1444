@@ -1,0 +1,4 @@
+adjust width and height of images in on-hover-field;
+add on-click-events to on-hover-field;
+place <p>-elements inside on-hover-field;
+add a bunch of grid items to the #map-element;
