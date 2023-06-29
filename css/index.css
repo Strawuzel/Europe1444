@@ -1,5 +1,5 @@
 body{
-    display: grid;
+    display: none;
     justify-content: center;
 }
 map{
@@ -11,11 +11,14 @@ map{
     height: 1080px;
 
 }
+div{
+    display: none;
+}
 map div{
-
+display: none;
 }
 #austria-field{
-
+    display: none;
 
 }
 #austria-img{
