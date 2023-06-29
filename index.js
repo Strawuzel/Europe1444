@@ -8,5 +8,7 @@ const france1444ImgEl = document.getElementById("france-1444-img");
 const castille1444ImgEl = document.getElementById("castille-1444-img");
 const muscovy1444ImgEl = document.getElementById("muscovy-1444-img");
 function showTooltip(element){
-    element.style.display = "flex"
+/*
+    element.style.display = "grid"
+*/
 }
