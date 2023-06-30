@@ -5,7 +5,7 @@ const brandenburg1444ImgEl = document.getElementById("brandenburg-1444-img");
 const denmark1444ImgEl = document.getElementById("denmark-1444-img");
 const england1444ImgEl = document.getElementById("england-1444-img");
 const france1444ImgEl = document.getElementById("france-1444-img");
-const castille1444ImgEl = document.getElementById("castile-1444-img");
+const castile1444ImgEl = document.getElementById("castile-1444-img");
 const muscovy1444ImgEl = document.getElementById("muscovy-1444-img");
 
 function showTooltip(element){

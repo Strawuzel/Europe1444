@@ -1,19 +1,20 @@
 body {
     display: grid;
     justify-content: center;
-    background-image: url("/images/1444/globalMap1444.jpg");
-    background-repeat: no-repeat;
+
 
 }
 
 #map {
     display: grid;
-
+    background-image: url("/images/1444/globalMap1444.jpg");
+    background-repeat: no-repeat;
     background-position: center;
     justify-content: center;
+    object-fit: contain;
     max-width: 60vw;
     max-height: 40vw;
-    grid-template-columns: auto auto auto auto auto auto auto auto;
+    grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto;
     grid-template-rows: auto auto auto auto auto auto auto auto;
 }
 
@@ -27,7 +28,7 @@ img {
 }
 
 #map div {
-    display: flex;
+    display: grid;
     justify-content: center;
     color: aqua;
     width: 5vw;
@@ -37,7 +38,7 @@ img {
 }
 
 #austria-1444-field {
-    display: flex;
+    display: grid;
     width: 40vw;
     height: 40vw;
 }
