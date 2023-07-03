@@ -1,59 +1,142 @@
-/*body {
+body {
     display: grid;
     justify-content: center;
-}*/
-#denmark-1444-field{
-    display: flex;
-    background-color: yellowgreen;
-    width: 100px;
-    height: 100px;
 }
-#map {
-    display: grid;
-   /* background-image: url("/images/1444/globalMap1444.jpg");
-    background-repeat: no-repeat;
-    background-position: center;*/
+
+map {
+    /* display: grid;*/
     justify-content: center;
-    object-fit: contain;
     width: 1920px;
     height: 1080px;
-    /*max-width: 60vw;
-    max-height: 40vw;
-    grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto;
-    grid-template-rows: auto auto auto auto auto auto auto auto;*/
+    position: relative;
+    z-index: 0;
 }
 
 img {
     width: 40vw;
-    height: 40vw;
-    max-width: 40vw;
-    max-height: 40vw;
-    /*display: none;*/
+    height: 25vw;
+    /*object-fit: contain;*/
+    /*position: absolute;*/
+    z-index: 1;
+    justify-content: center;
 }
 
-/*#map div {
-    display: grid;
-    justify-content: center;
-    color: aqua;
-    width: 5vw;
-    height: 5vw;
-    max-width: 40vw;
-    max-height: 40vw;
-}*/
-
-/*#austria-1444-field {
-    display: grid;
-    width: 40vw;
-    height: 40vw;
-}*/
-
-/*#austria-1444-img {
+#tooltip-container {
     display: none;
     width: 40vw;
-    height: 40vw;
-}*/
+    height: 25vw;
+    justify-content: center;
+    position: absolute;
+    z-index: 1;
+}
 
-/*
-#austria-1444-img:hover {
+#england-1444-img {
+    width: 25vw;
+    height: 30vw;
+}
+#england-tooltip-text{
+    width: 25vw;
+    height: 30vw;
+}
+
+#muscovy-text-container {
     display: grid;
-}*/
+    color: goldenrod;
+    justify-content: center;
+    font-weight: bold;
+    font-size: larger;
+    z-index: 1;
+    grid-column: 1;
+    grid-row: 1;
+    background-color: palegoldenrod;
+    width: 40vw;
+    height: 25vw;
+}
+
+#muscovy-tooltip {
+    display: grid;
+    width: 40vw;
+    height: 25vw;
+    z-index: 1;
+}
+#muscovy-tooltip img{
+    grid-column: 2;
+    grid-row: 1;
+}
+#muscovy-tooltip p{
+    grid-column: 1;
+    grid-row: 1;
+}
+
+#denmark-tooltip {
+    display: none;
+    width: 40vw;
+    height: 25vw;
+    position: absolute;
+    z-index: 1;
+}
+
+#england-tooltip {
+    display: none;
+    width: 25vw;
+    height: 40vw;
+    position: absolute;
+    z-index: 1;
+}
+
+#france-tooltip {
+    display: none;
+    width: 40vw;
+    height: 25vw;
+    position: absolute;
+    z-index: 1;
+}
+
+#castile-tooltip {
+    display: none;
+    width: 40vw;
+    height: 25vw;
+    position: absolute;
+    z-index: 1;
+}
+
+#brandenburg-tooltip {
+    display: none;
+    width: 40vw;
+    height: 25vw;
+    position: absolute;
+    z-index: 1;
+}
+
+#austria-tooltip {
+    display: none;
+    width: 40vw;
+    height: 25vw;
+    position: absolute;
+    z-index: 1;
+}
+
+#poland-tooltip {
+    display: none;
+    width: 40vw;
+    height: 25vw;
+    position: absolute;
+    z-index: 1;
+}
+
+#ottoman-tooltip {
+    display: none;
+    width: 40vw;
+    height: 25vw;
+    position: absolute;
+    z-index: 1;
+}
+
+#globalMap-1444-img {
+    /* display: grid;*/
+    width: 1920px;
+    height: 1080px;
+    z-index: 0;
+    position: relative;
+}
+
