@@ -1,3 +1,9 @@
 need new brandenburg-img;
-need rearrange container-boxes to fit in site
-need to add buttons to container boxes to show questions
+need texts for "countries";
+need questions and answers;
+need resizing for tooltips and images;
+need to fix the bug with england-box;
+need border-color for area-elements if possible;
+need background image for body;
+need to find fitting font-style;
+
