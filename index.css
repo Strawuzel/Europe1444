@@ -4,18 +4,18 @@ body {
 }
 
 map {
-    display: revert;
+    display: block;
     justify-content: center;
-    width: 1920px;
-    height: 1080px;
+/*    width: 1920px;
+    height: 1080px;*/
     position: relative;
     z-index: 0;
 }
 
 #globalMap-1444-img {
-    display: revert;
-    width: 1920px;
-    height: 1080px;
+    display: block;
+    width: 100%;
+    height: 100%;
     z-index: 0;
     position: relative;
 }
@@ -54,6 +54,7 @@ img {
     justify-content: center;
     font-weight: bold;
     font-size: larger;
+    overflow: auto;
     z-index: 1;
     grid-column: 1;
     grid-row: 1;

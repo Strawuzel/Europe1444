@@ -1,9 +1,13 @@
-need new brandenburg-img;
-need texts for "countries";
-need questions and answers;
+add class-tags for tooltip-boxes;
+rewrite texts for countries;
+check questions and answers;
 need resizing for tooltips and images;
+need to adapt tooltip-functions to stay in window with tooltips; window.innerheigth/window.innerwidth
+need to fix bug where tooltip window hides on tooltip-text-element(prob give class and include in if-statement)
 need to fix the bug with england-box;
-need border-color for area-elements if possible;
+improve responsiveness;
+style buttons;
+need border-color for area-elements if possible. check jquery/maplight again. ask for help with that;
 need background image for body;
 need to find fitting font-style;
 
