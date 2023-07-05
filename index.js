@@ -35,52 +35,45 @@ const denmarkTextContainerEl = document.getElementById("denmark-text-container")
 const englandTextContainerEl = document.getElementById("england-text-container");
 const franceTextContainerEl = document.getElementById("france-text-container");
 const castileTextContainerEl = document.getElementById("castile-text-container");
-function showTooltipMiddle(element, image) {
-    const x = event.clientX - 1000;
-    const y = event.clientY;
 
+function showTooltip(element, image) {
+    let x = event.clientX;
+    let y = event.clientY;
+   /* if (tooltipContainerEl. .style.display === "grid"){
+        tooltipContainerEl.style.display = "none"
+    }*/
     tooltipContainerEl.style.display = "grid"
     element.style.display = "grid"
     image.style.display = "revert"
+    const windowHeight = window.innerHeight;
+    const windowWidth = window.innerWidth;
+    const tooltipHeight = tooltipContainerEl.offsetHeight;
+    const tooltipWidth = tooltipContainerEl.offsetWidth;
+    if (x + tooltipWidth > windowWidth) {
+        x = windowWidth - (tooltipWidth + 10)
+    }
+    if (y + tooltipHeight  > windowHeight) {
+        y = windowHeight - (tooltipHeight + 10)
+    }
     tooltipContainerEl.style.left = x + "px";
     tooltipContainerEl.style.top = y + "px";
-}
 
-function showTooltipRight(element, image) {
-    const x = event.clientX - 200;
-    const y = event.clientY;
-
-    tooltipContainerEl.style.display = "grid"
-    element.style.display = "grid"
-    image.style.display = "revert"
-    tooltipContainerEl.style.left = x + "px";
-    tooltipContainerEl.style.top = y + "px";
-}
-
-function showTooltipLeft(element, image) {
-    const x = event.clientX - 1600;
-    const y = event.clientY;
-
-    tooltipContainerEl.style.display = "grid"
-    element.style.display = "grid"
-    image.style.display = "revert"
-    tooltipContainerEl.style.left = x + "px";
-    tooltipContainerEl.style.top = y + "px";
 }
 
 function hideTooltip(element, image) {
     const cursor = document.elementFromPoint(event.clientX, event.clientY);
-    if (element !== cursor.parentElement && !(cursor.parentElement in element.children) && cursor.className !== "question"){
-    tooltipContainerEl.style.display = "none"
-    element.style.display = "none"
-    image.style.display = "none"}
+    if (element !== cursor.parentElement && cursor.className !== "tooltip" && cursor.className !== "question") {
+        tooltipContainerEl.style.display = "none"
+        element.style.display = "none"
+        image.style.display = "none"
+    }
 }
 
 function switchContent(element, switchElement) {
-    if (element.style.display === "grid"){
+    if (element.style.display === "grid") {
         element.style.display = "none"
         switchElement.style.display = "grid"
-    }else{
+    } else {
         element.style.display = "grid"
         switchElement.style.display = "none"
     }

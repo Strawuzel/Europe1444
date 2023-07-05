@@ -6,10 +6,13 @@ body {
 map {
     display: block;
     justify-content: center;
-/*    width: 1920px;
-    height: 1080px;*/
     position: relative;
     z-index: 0;
+}
+h3{
+    display: grid;
+    justify-content: center;
+    font-size: xx-large;
 }
 
 #globalMap-1444-img {
@@ -30,8 +33,6 @@ img {
 
 #tooltip-container {
     display: none;
-    width: 30vw;
-    height: 25vw;
     justify-content: center;
     position: absolute;
     z-index: 1;
@@ -42,13 +43,15 @@ img {
     height: 30vw;
 }
 
-#england-tooltip-text {
+#england-tooltip-text{
+    margin: 2vw;
     width: 25vw;
     height: 30vw;
 }
 
 #muscovy-text-container, #denmark-text-container, #brandenburg-text-container, #austria-text-container, #poland-text-container,
-#ottoman-text-container, #muscovy-question, #denmark-question, #brandenburg-question, #austria-question, #poland-question, #ottoman-question {
+#ottoman-text-container, #muscovy-question, #denmark-question, #brandenburg-question, #austria-question, #poland-question,
+#ottoman-question {
     display: grid;
     color: goldenrod;
     justify-content: center;
@@ -69,6 +72,7 @@ img {
     justify-content: center;
     font-weight: bold;
     font-size: larger;
+    overflow: auto;
     z-index: 1;
     grid-column: 2;
     grid-row: 1;
@@ -76,27 +80,27 @@ img {
     width: 30vw;
     height: 25vw;
 }
-
+button{
+    margin: 2px;
+    border-radius: 11%;
+}
 #england-text-container, #england-question {
     display: grid;
     color: goldenrod;
-    justify-content: center;
     font-weight: bold;
     font-size: larger;
+    overflow: auto;
     z-index: 1;
     grid-column: 2;
     grid-row: 1;
     background-color: palegoldenrod;
-    width: 25vw;
+    width: 30vw;
     height: 30vw;
 }
 
 #muscovy-tooltip, #denmark-tooltip, #france-tooltip, #castile-tooltip, #brandenburg-tooltip,
 #austria-tooltip, #poland-tooltip, #ottoman-tooltip {
     display: none;
-    width: 30vw;
-    height: 25vw;
-    position: fixed;
     z-index: 1;
 }
 
@@ -109,15 +113,21 @@ img {
 
 #muscovy-tooltip p, #poland-tooltip p, #ottoman-tooltip p, #austria-tooltip p, #denmark-tooltip p,
 #brandenburg-tooltip p {
+    margin: 2vw;
     grid-column: 1;
     grid-row: 2;
 }
-
+p{
+    margin: 2vw;
+}
+h1{
+    display: grid;
+    justify-content: center;
+}
 
 #england-tooltip {
     display: none;
-    width: 25vw;
-    height: 40vw;
+    justify-content: center;
     position: absolute;
     z-index: 1;
 }
