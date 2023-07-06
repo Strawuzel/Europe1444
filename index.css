@@ -35,6 +35,8 @@ img {
     display: none;
     justify-content: center;
     position: absolute;
+    overflow: clip;
+    border-radius: 10%;
     z-index: 1;
 }
 

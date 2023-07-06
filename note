@@ -5,4 +5,7 @@ improve responsiveness;
 style buttons;
 need background image for body;
 need to find fitting font-style;
+switch from html-events to js-event-listener
+ADDON: extend to 1792;
+
 

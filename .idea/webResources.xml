@@ -8,6 +8,9 @@
             <path value="file://$PROJECT_DIR$/images/1444" />
             <path value="file://$PROJECT_DIR$/images/1792" />
             <path value="file://$PROJECT_DIR$/images" />
+            <path value="file://$PROJECT_DIR$/icons" />
+            <path value="file://$PROJECT_DIR$/rsrc" />
+            <path value="file://$PROJECT_DIR$/rsc" />
           </resourceRoots>
         </entryData>
       </entry>
