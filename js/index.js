@@ -35,6 +35,7 @@ const denmarkTextContainerEl = document.getElementById("denmark-text-container")
 const englandTextContainerEl = document.getElementById("england-text-container");
 const franceTextContainerEl = document.getElementById("france-text-container");
 const castileTextContainerEl = document.getElementById("castile-text-container");
+const muscovyQuestionEL = document.getElementById("muscovy-question-text");
 
 const questionArray = [
     questionMuscovy = {
@@ -74,6 +75,7 @@ const questionArray = [
         answer: "Constantinople"
     }
 ];
+
 
 function showTooltip(element, image) {
     let x = event.clientX;
