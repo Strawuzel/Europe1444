@@ -36,12 +36,51 @@ const englandTextContainerEl = document.getElementById("england-text-container")
 const franceTextContainerEl = document.getElementById("france-text-container");
 const castileTextContainerEl = document.getElementById("castile-text-container");
 
+const questionArray = [
+    questionMuscovy = {
+        question: "Who was the ruler of Muscovy from 1462 to 1505 and expanded Muscovy's territory while challenging the authority of the Mongol-Tatar Golden Horde?",
+        answer: "Ivan the Great"
+    },
+    questionDenmark = {
+        question: "The Øresund strait, located between Denmark and Sweden,played a significant role in trade and maritime activities during the 15th century. Which toll was established by Denmark to collect revenue from ships passing through the Øresund?",
+        answer: "Sound Toll"
+    },
+    questionEngland = {
+        question: "Which conflict in England, spanning from 1455 to 1487, was fought between the rival houses of Lancaster and York for control of the English throne?",
+        answer: "Wars of the Roses"
+    },
+    questionFrance = {
+        question: "Who played a significant role in the Hundred Years' War, leading the French forces to several victories before being captured and executed?",
+        answer: "Joan of Arc"
+    },
+    questionCastile = {
+        question: "Who completed the Christian reconquest of the Iberian Peninsula by capturing the Emirate of Granada in 1492?",
+        answer: "Ferdinand II of Aragon"
+    },
+    questionBrandenburg = {
+        question: "Which ruling dynasty gained control over the Duchy of Brandenburg and established a strong influence in the region?",
+        answer: "Hohenzollern"
+    },
+    questionAustria = {
+        question: "Which ruling family consolidated their power in Austria during the 15th century?",
+        answer: "Habsburg"
+    },
+    questionPoland = {
+        question: "Which significant event in 1385 led to the personal union between Poland and the Grand Duchy of Lithuania?",
+        answer: "Union of Krewo"
+    },
+    questionOttoman = {
+        question: "Which major city did the Ottoman Empire capture in 1453, marking the end of the Byzantine Empire?",
+        answer: "Constantinople"
+    }
+];
+
 function showTooltip(element, image) {
     let x = event.clientX;
     let y = event.clientY;
-   /* if (tooltipContainerEl. .style.display === "grid"){
-        tooltipContainerEl.style.display = "none"
-    }*/
+    /* if (tooltipContainerEl. .style.display === "grid"){
+         tooltipContainerEl.style.display = "none"
+     }*/
     tooltipContainerEl.style.display = "grid"
     element.style.display = "grid"
     image.style.display = "revert"
@@ -52,7 +91,7 @@ function showTooltip(element, image) {
     if (x + tooltipWidth > windowWidth) {
         x = windowWidth - (tooltipWidth + 10)
     }
-    if (y + tooltipHeight  > windowHeight) {
+    if (y + tooltipHeight > windowHeight) {
         y = windowHeight - (tooltipHeight + 10)
     }
     tooltipContainerEl.style.left = x + "px";
