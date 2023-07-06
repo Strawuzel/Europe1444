@@ -4,10 +4,43 @@
     <meta charset="UTF-8">
     <title>Europe</title>
     <link href="index.css" rel="stylesheet">
+    <link href="resultBar.css" rel="stylesheet">
 </head>
 <body>
 <h1>EUROPE 1444</h1>
-<img id="globalMap-1444-img" src="rsc/images/1444/globalMap1444.jpg" alt="Global" usemap="#map">
+<div id="mapContainer">
+    <img id="globalMap-1444-img" src="rsc/images/1444/globalMap1444.jpg" alt="Global" usemap="#map">
+    <map name="map">
+        <area target="_blank" alt="Muscovy" title="Muscovy" onmouseout="hideTooltip(muscovyTooltipEl,muscovy1444ImgEl)"
+              coords="1614,262,1584,286,1543,284,1487,308,1442,288,1430,247,1391,232,1367,257,1394,284,1423,308,1455,325,1462,359,1491,369,1558,359,1584,332,1621,357,1618,383,1670,393,1684,368,1747,381,1765,376,1784,347,1752,330,1764,271,1811,249,1891,257,1899,205,1916,190,1914,142,1825,134,1802,86,1730,66,1648,90,1630,86,1599,96,1579,152,1548,152,1545,191"
+              shape="poly" onclick="showTooltip(muscovyTooltipEl, muscovy1444ImgEl)">
+        <area target="_blank" alt="Denmark" title="Denmark" onmouseout="hideTooltip(denmarkTooltipEl,denmark1444ImgEl)"
+              coords="759,244,711,266,703,322,737,329,754,342,776,359,799,364,820,356,825,335,843,334,867,337,886,346,901,342,877,318,886,308,920,305,923,293,852,291,828,252,811,249"
+              shape="poly" onclick="showTooltip(denmarkTooltipEl, denmark1444ImgEl)">
+        <area target="_blank" alt="England" title="England" onmouseout="hideTooltip(englandTooltipEl,england1444ImgEl)"
+              coords="377,350,416,316,440,355,471,399,474,427,494,425,521,435,504,466,486,479,509,488,481,501,503,538,496,574,477,623,430,632,399,511,360,527,315,533,350,493,384,484,323,471,355,445,342,413,382,411,394,382,371,374,340,376"
+              shape="poly" onclick="showTooltip(englandTooltipEl, england1444ImgEl)">
+        <area target="_blank" alt="France" title="France" onmouseout="hideTooltip(franceTooltipEl,france1444ImgEl)"
+              coords="503,567,521,551,548,543,606,558,618,611,582,609,572,624,574,658,589,679,608,677,620,695,648,733,591,772,552,785,511,799,442,787,472,746,462,714,440,695,416,655,479,662,465,636,489,624,491,599"
+              shape="poly" onclick="showTooltip(franceTooltipEl, france1444ImgEl)">
+        <area target="_blank" alt="Castile" title="Castile" onmouseout="hideTooltip(castileTooltipEl,castile1444ImgEl)"
+              coords="204,776,238,760,260,767,326,764,379,772,416,776,408,808,401,848,410,887,425,920,440,964,415,976,377,959,342,982,313,984,304,1023,286,1021,274,987,247,977,259,921,265,872,279,825,216,825"
+              shape="poly" onclick="showTooltip(castileTooltipEl, castile1444ImgEl)">
+        <area target="_blank" alt="Brandenburg" title="Brandenburg"
+              onmouseout="hideTooltip(brandenburgTooltipEl,brandenburg1444ImgEl)"
+              coords="773,434,778,449,803,451,808,432,819,437,825,459,846,461,856,459,858,446,873,444,873,454,888,458,900,464,915,451,912,431,874,429,873,412,851,400,842,417,808,407,795,417,781,425"
+              shape="poly" onclick="showTooltip(brandenburgTooltipEl, brandenburg1444ImgEl)">
+        <area target="_blank" alt="Austria" title="Austria" onmouseout="hideTooltip(austriaTooltipEl,austria1444ImgEl)"
+              coords="864,577,880,579,888,567,907,560,927,567,946,569,949,591,949,608,934,613,924,649,907,659,890,657,893,677,895,696,869,696,854,704,841,681,847,660,834,652,798,660,773,655,761,642,763,626,783,625,798,632,822,630,846,625,861,615,868,596"
+              shape="poly" onclick="showTooltip(austriaTooltipEl, austria1444ImgEl)">
+        <area target="_blank" alt="Poland" title="Poland" onmouseout="hideTooltip(polandTooltipEl,poland1444ImgEl)"
+              coords="929,417,922,451,939,473,959,480,976,493,996,507,1013,534,1012,553,1034,549,1069,549,1086,563,1115,566,1125,559,1168,583,1202,627,1207,602,1220,602,1220,585,1244,580,1278,600,1274,578,1271,542,1220,554,1188,531,1163,515,1156,498,1174,458,1132,483,1103,464,1085,442,1102,439,1108,405,1052,427,1029,422,996,432,983,417,946,398"
+              shape="poly" onclick="showTooltip(polandTooltipEl, poland1444ImgEl)">
+        <area target="_blank" alt="Ottomans" title="Ottomans" onmouseout="hideTooltip(ottomanTooltipEl,ottoman1444ImgEl)"
+              coords="1020,875,1049,919,1086,919,1107,939,1120,928,1124,906,1108,880,1120,873,1134,885,1152,890,1144,870,1159,863,1178,858,1203,867,1222,868,1207,887,1217,906,1235,906,1237,933,1237,948,1224,950,1244,963,1246,982,1244,994,1263,995,1279,1007,1293,1007,1302,1023,1324,1019,1337,1019,1346,999,1369,1004,1383,997,1364,985,1369,960,1361,941,1376,931,1405,919,1425,914,1449,934,1473,933,1501,924,1522,943,1551,912,1574,914,1574,897,1549,885,1551,873,1561,878,1554,858,1493,836,1491,858,1408,858,1398,833,1349,851,1308,850,1300,858,1296,882,1254,855,1244,836,1257,822,1256,804,1266,777,1285,768,1285,751,1291,729,1291,719,1303,724,1313,717,1312,704,1273,697,1273,733,1234,744,1215,761,1171,765,1127,758,1108,717,1086,739,1098,765,1115,775,1108,804,1078,817,1049,833,1059,855,1049,867"
+              shape="poly" onclick="showTooltip(ottomanTooltipEl, ottoman1444ImgEl)">
+    </map>
+</div>
 <div id="tooltip-container">
     <div id="muscovy-tooltip" class="tooltip" onmouseout="hideTooltip(muscovyTooltipEl,muscovy1444ImgEl)">
         <div id="muscovy-question" class="question">
@@ -20,7 +53,8 @@
         </div>
         <div id="muscovy-text-container" class="tooltip">
             <h3 class="tooltip">Muscovy</h3>
-            <p id="muscovy-tooltip-text" class="tooltip">In the 15th century, Muscovy (also known as the Grand Duchy of Moscow)
+            <p id="muscovy-tooltip-text" class="tooltip">In the 15th century, Muscovy (also known as the Grand Duchy of
+                Moscow)
                 experienced significant political, territorial, and cultural developments. Here are some key events and
                 highlights of what happened in Muscovy during that time:<br><br>
 
@@ -76,7 +110,8 @@
         </div>
         <div id="denmark-text-container" class="tooltip">
             <h3 class="tooltip">Denmark</h3>
-            <p id="denmark-tooltip-text" class="tooltip">In the 15th century, Denmark, under the rule of the Kalmar Union, experienced
+            <p id="denmark-tooltip-text" class="tooltip">In the 15th century, Denmark, under the rule of the Kalmar
+                Union, experienced
                 several significant events and developments. Here are some key highlights of what happened in Denmark
                 during that time:<br><br>
 
@@ -131,14 +166,16 @@
         </div>
         <div id="england-text-container" class="tooltip">
             <h3 class="tooltip">England</h3>
-            <p id="england-tooltip-text" class="tooltip">The 15th century in England was a period of political and social changes,
+            <p id="england-tooltip-text" class="tooltip">The 15th century in England was a period of political and
+                social changes,
                 marked by significant events and developments. Here are some key highlights of what happened in England
                 during that time:<br><br>
 
                 Wars of the Roses: The 15th century saw the Wars of the Roses, a series of civil wars fought between two
                 rival branches of the Plantagenet dynasty, the House of Lancaster and the House of York. These
                 conflicts, which began in the 1450s, resulted in a power struggle for the English throne. The wars ended
-                in 1485 with the victory of Henry Tudor, who became King Henry VII, establishing the Tudor dynasty.<br><br>
+                in 1485 with the victory of Henry Tudor, who became King Henry VII, establishing the Tudor
+                dynasty.<br><br>
 
                 Hundred Years' War: The 15th century witnessed the final stages of the Hundred Years' War between
                 England and France. The war, which had begun in the 14th century, saw England gradually losing its
@@ -151,7 +188,8 @@
 
                 Rise of the Tudor Dynasty: The Tudor dynasty came to power in the late 15th century. Henry Tudor, who
                 became Henry VII, won the Battle of Bosworth Field in 1485, effectively ending the Wars of the Roses.
-                The Tudor dynasty, which lasted until 1603, brought stability and significant changes to England.<br><br>
+                The Tudor dynasty, which lasted until 1603, brought stability and significant changes to
+                England.<br><br>
 
                 Cultural and Intellectual Developments: The 15th century in England witnessed the flourishing of the
                 English Renaissance. Influenced by the Italian Renaissance, there was an increased focus on literature,
@@ -185,7 +223,8 @@
         </div>
         <div id="france-text-container" class="tooltip">
             <h3 class="tooltip">France</h3>
-            <p id="france-tooltip-text" class="tooltip">The 15th century was a transformative period for France, marked by significant
+            <p id="france-tooltip-text" class="tooltip">The 15th century was a transformative period for France, marked
+                by significant
                 political, cultural, and military events. Here are some key highlights of what happened in France during
                 that time:<br><br>
 
@@ -241,7 +280,8 @@
         </div>
         <div id="castile-text-container" class="tooltip">
             <h3 class="tooltip">Castile</h3>
-            <p id="castile-tooltip-text" class="tooltip">The 15th century was a crucial period for the Kingdom of Castile, which was
+            <p id="castile-tooltip-text" class="tooltip">The 15th century was a crucial period for the Kingdom of
+                Castile, which was
                 part of the medieval Christian realms on the Iberian Peninsula. Here are some significant events and
                 developments that took place in Castile during that time:<br><br>
 
@@ -296,7 +336,8 @@
         </div>
         <div id="brandenburg-text-container" class="tooltip">
             <h3 class="tooltip">Brandenburg</h3>
-            <p id="brandenburg-tooltip-text" class="tooltip">In the 15th century, the Duchy of Brandenburg, located in what is now
+            <p id="brandenburg-tooltip-text" class="tooltip">In the 15th century, the Duchy of Brandenburg, located in
+                what is now
                 northeastern Germany, experienced significant political and territorial developments. Here are some key
                 events and developments that took place in the Duchy of Brandenburg during that time:<br><br>
 
@@ -398,7 +439,8 @@
         </div>
         <div id="poland-text-container" class="tooltip">
             <h3 class="tooltip">Poland</h3>
-            <p id="poland-tooltip-text" class="tooltip">In the 15th century, Poland experienced significant political and social
+            <p id="poland-tooltip-text" class="tooltip">In the 15th century, Poland experienced significant political
+                and social
                 changes. Here are some key events and developments that occurred in Poland during that time:<br><br>
 
                 Union of Krewo (1385): While the Union of Krewo technically took place in the late 14th century, its
@@ -456,7 +498,8 @@
         </div>
         <div id="ottoman-text-container" class="tooltip">
             <h3 class="tooltip">Ottoman</h3>
-            <p id="ottoman-tooltip-text" class="tooltip">The 15th century was a crucial period for the Ottoman Empire, marked by
+            <p id="ottoman-tooltip-text" class="tooltip">The 15th century was a crucial period for the Ottoman Empire,
+                marked by
                 significant expansions and important developments. Here are some key events that occurred in the Ottoman
                 Empire during that time:<br><br>
 
@@ -472,11 +515,13 @@
 
                 Sultan Mehmed the Conqueror: Mehmed II, also known as Mehmed the Conqueror, ruled the Ottoman Empire
                 during the mid-15th century. Besides capturing Constantinople, he implemented administrative reforms,
-                promoted cultural and intellectual development, and transformed Istanbul into a thriving capital.<br><br>
+                promoted cultural and intellectual development, and transformed Istanbul into a thriving
+                capital.<br><br>
 
                 Naval Dominance: The Ottoman Empire achieved naval supremacy in the eastern Mediterranean during the
                 15th century. The Ottoman fleet, led by admirals like Baltaoglu and Kemal Reis, conducted successful
-                campaigns against various Christian maritime powers and secured control over strategic waterways.<br><br>
+                campaigns against various Christian maritime powers and secured control over strategic
+                waterways.<br><br>
 
                 Administrative Reforms: Mehmed II initiated significant administrative reforms known as the "Kanunname,"
                 aimed at centralizing power and consolidating the empire. These reforms standardized taxation,
@@ -499,62 +544,35 @@
              onclick="switchContent(ottomanQuestionEl,ottomanTextContainerEl)">
     </div>
 </div>
-<map name="map">
-    <area target="_blank" alt="Muscovy" title="Muscovy" onmouseout="hideTooltip(muscovyTooltipEl,muscovy1444ImgEl)"
-          coords="1614,262,1584,286,1543,284,1487,308,1442,288,1430,247,1391,232,1367,257,1394,284,1423,308,1455,325,1462,359,1491,369,1558,359,1584,332,1621,357,1618,383,1670,393,1684,368,1747,381,1765,376,1784,347,1752,330,1764,271,1811,249,1891,257,1899,205,1916,190,1914,142,1825,134,1802,86,1730,66,1648,90,1630,86,1599,96,1579,152,1548,152,1545,191"
-          shape="poly" onclick="showTooltip(muscovyTooltipEl, muscovy1444ImgEl)">
-    <area target="_blank" alt="Denmark" title="Denmark" onmouseout="hideTooltip(denmarkTooltipEl,denmark1444ImgEl)"
-          coords="759,244,711,266,703,322,737,329,754,342,776,359,799,364,820,356,825,335,843,334,867,337,886,346,901,342,877,318,886,308,920,305,923,293,852,291,828,252,811,249"
-          shape="poly" onclick="showTooltip(denmarkTooltipEl, denmark1444ImgEl)">
-    <area target="_blank" alt="England" title="England" onmouseout="hideTooltip(englandTooltipEl,england1444ImgEl)"
-          coords="377,350,416,316,440,355,471,399,474,427,494,425,521,435,504,466,486,479,509,488,481,501,503,538,496,574,477,623,430,632,399,511,360,527,315,533,350,493,384,484,323,471,355,445,342,413,382,411,394,382,371,374,340,376"
-          shape="poly" onclick="showTooltip(englandTooltipEl, england1444ImgEl)">
-    <area target="_blank" alt="France" title="France" onmouseout="hideTooltip(franceTooltipEl,france1444ImgEl)"
-          coords="503,567,521,551,548,543,606,558,618,611,582,609,572,624,574,658,589,679,608,677,620,695,648,733,591,772,552,785,511,799,442,787,472,746,462,714,440,695,416,655,479,662,465,636,489,624,491,599"
-          shape="poly" onclick="showTooltip(franceTooltipEl, france1444ImgEl)">
-    <area target="_blank" alt="Castile" title="Castile" onmouseout="hideTooltip(castileTooltipEl,castile1444ImgEl)"
-          coords="204,776,238,760,260,767,326,764,379,772,416,776,408,808,401,848,410,887,425,920,440,964,415,976,377,959,342,982,313,984,304,1023,286,1021,274,987,247,977,259,921,265,872,279,825,216,825"
-          shape="poly" onclick="showTooltip(castileTooltipEl, castile1444ImgEl)">
-    <area target="_blank" alt="Brandenburg" title="Brandenburg" onmouseout="hideTooltip(brandenburgTooltipEl,brandenburg1444ImgEl)"
-          coords="773,434,778,449,803,451,808,432,819,437,825,459,846,461,856,459,858,446,873,444,873,454,888,458,900,464,915,451,912,431,874,429,873,412,851,400,842,417,808,407,795,417,781,425"
-          shape="poly" onclick="showTooltip(brandenburgTooltipEl, brandenburg1444ImgEl)">
-    <area target="_blank" alt="Austria" title="Austria" onmouseout="hideTooltip(austriaTooltipEl,austria1444ImgEl)"
-          coords="864,577,880,579,888,567,907,560,927,567,946,569,949,591,949,608,934,613,924,649,907,659,890,657,893,677,895,696,869,696,854,704,841,681,847,660,834,652,798,660,773,655,761,642,763,626,783,625,798,632,822,630,846,625,861,615,868,596"
-          shape="poly" onclick="showTooltip(austriaTooltipEl, austria1444ImgEl)">
-    <area target="_blank" alt="Poland" title="Poland" onmouseout="hideTooltip(polandTooltipEl,poland1444ImgEl)"
-          coords="929,417,922,451,939,473,959,480,976,493,996,507,1013,534,1012,553,1034,549,1069,549,1086,563,1115,566,1125,559,1168,583,1202,627,1207,602,1220,602,1220,585,1244,580,1278,600,1274,578,1271,542,1220,554,1188,531,1163,515,1156,498,1174,458,1132,483,1103,464,1085,442,1102,439,1108,405,1052,427,1029,422,996,432,983,417,946,398"
-          shape="poly" onclick="showTooltip(polandTooltipEl, poland1444ImgEl)">
-    <area target="_blank" alt="Ottomans" title="Ottomans" onmouseout="hideTooltip(ottomanTooltipEl,ottoman1444ImgEl)"
-          coords="1020,875,1049,919,1086,919,1107,939,1120,928,1124,906,1108,880,1120,873,1134,885,1152,890,1144,870,1159,863,1178,858,1203,867,1222,868,1207,887,1217,906,1235,906,1237,933,1237,948,1224,950,1244,963,1246,982,1244,994,1263,995,1279,1007,1293,1007,1302,1023,1324,1019,1337,1019,1346,999,1369,1004,1383,997,1364,985,1369,960,1361,941,1376,931,1405,919,1425,914,1449,934,1473,933,1501,924,1522,943,1551,912,1574,914,1574,897,1549,885,1551,873,1561,878,1554,858,1493,836,1491,858,1408,858,1398,833,1349,851,1308,850,1300,858,1296,882,1254,855,1244,836,1257,822,1256,804,1266,777,1285,768,1285,751,1291,729,1291,719,1303,724,1313,717,1312,704,1273,697,1273,733,1234,744,1215,761,1171,765,1127,758,1108,717,1086,739,1098,765,1115,775,1108,804,1078,817,1049,833,1059,855,1049,867"
-          shape="poly" onclick="showTooltip(ottomanTooltipEl, ottoman1444ImgEl)">
-</map>
 <div id="resultBar">
-    <div id="muscovy-icon">
-        <img src="rsc/icons/MOS.png" alt="Muscovy">
-    </div>
-    <div id="denmark-icon">
-        <img src="rsc/icons/DAN.png" alt="Denmark">
-    </div>
-    <div id="england-icon">
-        <img src="rsc/icons/ENG.png" alt="England">
-    </div>
-    <div id="france-icon">
-        <img src="rsc/icons/FRA.png" alt="France">
-    </div>
-    <div id="castile-icon">
-        <img src="rsc/icons/CAS.png" alt="Castile">
-    </div>
-    <div id="brandenburg-icon">
-        <img src="rsc/icons/BRA.png" alt="Brandenburg">
-    </div>
-    <div id="austria-icon">
-        <img src="rsc/icons/HAB.png" alt="Austria">
-    </div>
-    <div id="poland-icon">
-        <img src="rsc/icons/POL.png" alt="Poland">
-    </div>
-    <div id="ottoman-icon">
-        <img src="rsc/icons/TUR.png" alt="Ottoman">
+    <div id="icon-container" >
+        <div id="muscovy-icon" class="icon-container">
+            <img src="icons/130px-Shield_Muscovy.png">
+        </div>
+        <div id="denmark-icon" class="icon-container">
+            <img src="icons/130px-Shield_Denmark.png">
+        </div>
+        <div id="england-icon" class="icon-container">
+            <img src="icons/130px-Shield_England.png">
+        </div>
+        <div id="france-icon" class="icon-container">
+            <img src="icons/130px-Shield_France.png">
+        </div>
+        <div id="castile-icon" class="icon-container">
+            <img src="icons/130px-Shield_Castile.png">
+        </div>
+        <div id="brandenburg-icon" class="icon-container">
+            <img src="icons/130px-Shield_Brandenburg.png">
+        </div>
+        <div id="austria-icon" class="icon-container">
+            <img src="icons/130px-Shield_Brandenburg.png">
+        </div>
+        <div id="poland-icon" class="icon-container">
+            <img src="icons/130px-Shield_Poland.png">
+        </div>
+        <div id="ottoman-icon" class="icon-container">
+            <img src="icons/130px-Shield_Ottomans.png">
+        </div>
     </div>
 </div>
 <script src="index.js"></script>

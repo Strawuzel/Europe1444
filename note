@@ -1,11 +1,13 @@
 rewrite texts for countries;
-need to find a way to make imageMapster work. prob ask
+need to find a way to make imageMapster.js work; prob ask;
 need to add bar with the 9 banner of the countries with 2 states (grey: not tried, colored: right answer given);
-improve responsiveness;
+improve responsiveness of resultBar-element;
 style buttons;
-need background image for body;
 need to find fitting font-style;
-switch from html-events to js-event-listener
+switch from html-events to js-event-listener;
+need england-icon;
+fix padding for tooltips;
+
 ADDON: extend to 1792;
 
 
