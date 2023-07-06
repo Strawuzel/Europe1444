@@ -77,7 +77,6 @@ img {
     color: goldenrod;
     justify-content: center;
     font-weight: bold;
-    font-size: larger;
     overflow: auto;
     z-index: 1;
     grid-column: 1;
@@ -92,7 +91,6 @@ img {
     color: goldenrod;
     justify-content: center;
     font-weight: bold;
-    font-size: larger;
     overflow: auto;
     z-index: 1;
     grid-column: 2;
