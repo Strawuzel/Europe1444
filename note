@@ -1,8 +1,8 @@
 rewrite texts for countries;
-need to add bar with the 9 banner of the countries with 3 states (grey: not tried, red: wrong answer given, green: right answer given);
+need to find a way to make imageMapster work. prob ask
+need to add bar with the 9 banner of the countries with 2 states (grey: not tried, colored: right answer given);
 improve responsiveness;
 style buttons;
-need border-color for area-elements if possible. check jquery/mapHighlight again. ask for help with that;
 need background image for body;
 need to find fitting font-style;
 
