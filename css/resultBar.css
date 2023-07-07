@@ -9,6 +9,7 @@
     background-image: url("");
     */
     border-radius: 2vw;
+    z-index: 0;
 }
 
 #icon-container {

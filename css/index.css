@@ -8,7 +8,6 @@ html {
 body {
     display: grid;
     justify-content: center;
-    width: 100%;
     height: 100%;
 }
 h1{
@@ -74,7 +73,6 @@ img {
     justify-content: center;
 }
 
-
 #muscovy-text-container, #denmark-text-container, #brandenburg-text-container, #austria-text-container, #poland-text-container,
 #ottoman-text-container, #muscovy-question, #denmark-question, #brandenburg-question, #austria-question, #poland-question,
 #ottoman-question {
@@ -86,7 +84,7 @@ img {
     z-index: 1;
     grid-column: 1;
     grid-row: 1;
-    background-color: palegoldenrod;
+    background-color: gainsboro;
     width: 20vw;
     height: 15vw;
 }
@@ -100,14 +98,32 @@ img {
     z-index: 1;
     grid-column: 2;
     grid-row: 1;
-    background-color: palegoldenrod;
+    background-color: gainsboro;
     width: 20vw;
     height: 15vw;
 }
+/*.tooltip::-webkit-scrollbar{
+    background-color: saddlebrown;
+}*/
 
 button {
+    justify-content: center;
     margin: 2px;
     border-radius: 11%;
+    max-width: 10vw;
+}
+.button-container {
+    /*
+    border: none;
+    */
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 1vw;
+    background-color: gainsboro;
+}
+button:hover{
+    opacity: 90%;
+    border-color: white;
 }
 
 #england-text-container, #england-question {
@@ -146,5 +162,3 @@ h1 {
     display: grid;
     justify-content: center;
 }
-
-
