@@ -1,21 +1,24 @@
 #resultBar {
-
+    top: auto;
     max-width: 80vw;
-    margin: 1%;
+    margin-left: 1%;
+    margin-bottom: 2%;
+    margin-top: 1%;
     background-color: gainsboro;
     /*
     background-image: url("");
     */
     border-radius: 2vw;
 }
-#icon-container{
+
+#icon-container {
     margin: 2vw;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     grid-auto-flow: column;
     grid-gap: 2%;
-
 }
+
 #resultBar img {
     display: revert;
     max-width: 4vw;
@@ -24,6 +27,7 @@
     overflow: auto;
     flex: 1;
 }
+
 #resultBar img:hover {
     filter: grayscale(0%);
 }
