@@ -1,15 +1,12 @@
 #resultBar {
-
+    margin: 2vw;
     max-width: 80vw;
-    margin: 1%;
+    padding: 1vw;
     background-color: gainsboro;
     /*
     background-image: url("");
     */
     border-radius: 2vw;
-}
-#icon-container{
-    margin: 2vw;
     display: flex;
     justify-content: space-between;
     grid-auto-flow: column;
