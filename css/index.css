@@ -21,24 +21,22 @@ h3 {
 }
 
 #mapBackgroundContainer {
-    width: 40vw;
-    height: 25vw;
+    width: 50vw;
+    height: 35vw;
     display: flex;
     align-items: center;
     justify-content: center;
     z-index: 1;
-    padding-top: 5%;
     background-image: url("../rsc/map-background-transformed.png");
     background-size: 100%;
     background-repeat: no-repeat;
     position: relative;
+    margin-top: 10vw;
     margin-right: 30vw;
     margin-left: 5vw;
-    overflow: hidden;
 }
 
 map {
-    justify-content: center;
     position: relative;
     z-index: 0;
 }
@@ -49,9 +47,6 @@ map {
 
 #globalMap-1444-img {
     display: block;
-    width: fit-content(100%);
-    height: fit-content(100%);
-
     z-index: 0;
 }
 
@@ -60,7 +55,7 @@ img {
     width: 20vw;
     height: 15vw;
     z-index: 1;
-    justify-content: center;
+
 }
 
 #tooltip-container {
