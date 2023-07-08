@@ -2,7 +2,7 @@ rewrite texts for countries;
 need to find a way to make imageMapster.js work; prob ask;
 need to add bar with the 9 banner of the countries with 2 states (grey: not tried, colored: right answer given);
 improve responsiveness of resultBar-element;
-fixate tooltips on click; add X to close window;
+fixate tooltips on click; add closing button;
 reduce code duplication in html and javascript;
 need to style buttons;
 need to write function to print question-elements;
