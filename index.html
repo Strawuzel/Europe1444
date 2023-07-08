@@ -36,7 +36,8 @@
         <area target="_blank" alt="Poland" title="Poland" onmouseout="hideTooltip(polandTooltipEl,poland1444ImgEl)"
               coords="929,417,922,451,939,473,959,480,976,493,996,507,1013,534,1012,553,1034,549,1069,549,1086,563,1115,566,1125,559,1168,583,1202,627,1207,602,1220,602,1220,585,1244,580,1278,600,1274,578,1271,542,1220,554,1188,531,1163,515,1156,498,1174,458,1132,483,1103,464,1085,442,1102,439,1108,405,1052,427,1029,422,996,432,983,417,946,398"
               shape="poly" onclick="showTooltip(polandTooltipEl, poland1444ImgEl)">
-        <area target="_blank" alt="Ottomans" title="Ottomans" onmouseout="hideTooltip(ottomanTooltipEl,ottoman1444ImgEl)"
+        <area target="_blank" alt="Ottomans" title="Ottomans"
+              onmouseout="hideTooltip(ottomanTooltipEl,ottoman1444ImgEl)"
               coords="1020,875,1049,919,1086,919,1107,939,1120,928,1124,906,1108,880,1120,873,1134,885,1152,890,1144,870,1159,863,1178,858,1203,867,1222,868,1207,887,1217,906,1235,906,1237,933,1237,948,1224,950,1244,963,1246,982,1244,994,1263,995,1279,1007,1293,1007,1302,1023,1324,1019,1337,1019,1346,999,1369,1004,1383,997,1364,985,1369,960,1361,941,1376,931,1405,919,1425,914,1449,934,1473,933,1501,924,1522,943,1551,912,1574,914,1574,897,1549,885,1551,873,1561,878,1554,858,1493,836,1491,858,1408,858,1398,833,1349,851,1308,850,1300,858,1296,882,1254,855,1244,836,1257,822,1256,804,1266,777,1285,768,1285,751,1291,729,1291,719,1303,724,1313,717,1312,704,1273,697,1273,733,1234,744,1215,761,1171,765,1127,758,1108,717,1086,739,1098,765,1115,775,1108,804,1078,817,1049,833,1059,855,1049,867"
               shape="poly" onclick="showTooltip(ottomanTooltipEl, ottoman1444ImgEl)">
     </map>
@@ -47,9 +48,11 @@
             <h3 class="question">Muscovy</h3>
             <p id="muscovy-question-text" class="question">Who was the ruler of Muscovy from 1462 to 1505 and expanded
                 Muscovy's territory while challenging the authority of the Mongol-Tatar Golden Horde?</p>
-            <button id="muscovy-answer-a" class="question">Ivan the Terrible</button>
-            <button id="muscovy-answer-b" class="question">Ivan the Great</button>
-            <button id="muscovy-answer-c" class="question">Ivan IV</button>
+            <div class="button-container">
+                <button id="muscovy-answer-a" class="question">Ivan the Terrible</button>
+                <button id="muscovy-answer-b" class="question">Ivan the Great</button>
+                <button id="muscovy-answer-c" class="question">Ivan IV</button>
+            </div>
         </div>
         <div id="muscovy-text-container" class="tooltip">
             <h3 class="tooltip">Muscovy</h3>
@@ -98,15 +101,16 @@
              onclick="switchContent(muscovyQuestionEl,muscovyTextContainerEl)">
     </div>
     <div id="denmark-tooltip" class="tooltip" onmouseout="hideTooltip(denmarkTooltipEl,denmark1444ImgEl)">
-
         <div id="denmark-question" class="question">
             <h3 class="question">Denmark</h3>
             <p id="denmark-question-text" class="question">The Øresund strait, located between Denmark and Sweden,
                 played a significant role in trade and maritime activities during the 15th century. Which toll was
                 established by Denmark to collect revenue from ships passing through the Øresund?</p>
-            <button id="denmark-answer-a" class="question">Baltic Levy</button>
-            <button id="denmark-answer-b" class="question">Sound Toll</button>
-            <button id="denmark-answer-c" class="question">Trade Tariff</button>
+            <div class="button-container">
+                <button id="denmark-answer-a" class="question">Baltic Levy</button>
+                <button id="denmark-answer-b" class="question">Sound Toll</button>
+                <button id="denmark-answer-c" class="question">Trade Tariff</button>
+            </div>
         </div>
         <div id="denmark-text-container" class="tooltip">
             <h3 class="tooltip">Denmark</h3>
@@ -160,9 +164,11 @@
             <h3 class="question">England</h3>
             <p id="england-question-text" class="question">Which conflict in England, spanning from 1455 to 1487, was
                 fought between the rival houses of Lancaster and York for control of the English throne?</p>
-            <button id="england-answer-a" class="question">Wars of the Three Kingdoms</button>
-            <button id="england-answer-b" class="question">Wars of the Roses and Thistles</button>
-            <button id="england-answer-c" class="question">Wars of the Roses</button>
+            <div class="button-container">
+                <button id="england-answer-a" class="question">Wars of the Three Kingdoms</button>
+                <button id="england-answer-b" class="question">Wars of the Roses and Thistles</button>
+                <button id="england-answer-c" class="question">Wars of the Roses</button>
+            </div>
         </div>
         <div id="england-text-container" class="tooltip">
             <h3 class="tooltip">England</h3>
@@ -217,9 +223,11 @@
             <h3 class="question">France</h3>
             <p id="france-question-text" class="question">Who played a significant role in the Hundred Years' War,
                 leading the French forces to several victories before being captured and executed?</p>
-            <button id="france-answer-a" class="question">Catherine de' Medici</button>
-            <button id="france-answer-b" class="question">Joan of Arc</button>
-            <button id="france-answer-c" class="question">Isabella of Castile</button>
+            <div class="button-container">
+                <button id="france-answer-a" class="question">Catherine de' Medici</button>
+                <button id="france-answer-b" class="question">Joan of Arc</button>
+                <button id="france-answer-c" class="question">Isabella of Castile</button>
+            </div>
         </div>
         <div id="france-text-container" class="tooltip">
             <h3 class="tooltip">France</h3>
@@ -274,9 +282,11 @@
             <h3 class="question">Castile</h3>
             <p id="castile-question-text" class="question">Who completed the Christian reconquest of the Iberian
                 Peninsula by capturing the Emirate of Granada in 1492?</p>
-            <button id="castile-answer-a" class="question">Ferdinand II of Aragon</button>
-            <button id="castile-answer-b" class="question">Isabella I of Castile</button>
-            <button id="castile-answer-c" class="question">Philip II</button>
+            <div class="button-container">
+                <button id="castile-answer-a" class="question">Ferdinand II of Aragon</button>
+                <button id="castile-answer-b" class="question">Isabella I of Castile</button>
+                <button id="castile-answer-c" class="question">Philip II</button>
+            </div>
         </div>
         <div id="castile-text-container" class="tooltip">
             <h3 class="tooltip">Castile</h3>
@@ -330,9 +340,11 @@
             <h3 class="question">Brandenburg</h3>
             <p id="brandenburg-question-text" class="question">Which ruling dynasty gained control over the Duchy of
                 Brandenburg and established a strong influence in the region?</p>
-            <button id="brandenburg-answer-a" class="question">Habsburg</button>
-            <button id="brandenburg-answer-b" class="question">Hohenzollern</button>
-            <button id="brandenburg-answer-c" class="question">Bourbon</button>
+            <div class="button-container">
+                <button id="brandenburg-answer-a" class="question">Habsburg</button>
+                <button id="brandenburg-answer-b" class="question">Hohenzollern</button>
+                <button id="brandenburg-answer-c" class="question">Bourbon</button>
+            </div>
         </div>
         <div id="brandenburg-text-container" class="tooltip">
             <h3 class="tooltip">Brandenburg</h3>
@@ -383,9 +395,11 @@
             <h3 class="question">Austria</h3>
             <p id="austria-question-text" class="question">Which ruling family consolidated their power in Austria
                 during the 15th century?</p>
-            <button id="austria-answer-a" class="question">Habsburg</button>
-            <button id="austria-answer-b" class="question">Wittelsbach</button>
-            <button id="austria-answer-c" class="question">Hohenzollern</button>
+            <div class="button-container">
+                <button id="austria-answer-a" class="question">Habsburg</button>
+                <button id="austria-answer-b" class="question">Wittelsbach</button>
+                <button id="austria-answer-c" class="question">Hohenzollern</button>
+            </div>
         </div>
         <div id="austria-text-container" class="tooltip">
             <h3 class="tooltip">Austria</h3>
@@ -433,9 +447,11 @@
             <h3 class="question">Poland</h3>
             <p id="poland-question-text" class="question">Which significant event in 1385 led to the personal union
                 between Poland and the Grand Duchy of Lithuania?</p>
-            <button id="poland-answer-a" class="question">Union of Krewo</button>
-            <button id="poland-answer-b" class="question">Treaty of Tordesillas</button>
-            <button id="poland-answer-c" class="question">Golden Bull of 1356</button>
+            <div class="button-container">
+                <button id="poland-answer-a" class="question">Union of Krewo</button>
+                <button id="poland-answer-b" class="question">Treaty of Tordesillas</button>
+                <button id="poland-answer-c" class="question">Golden Bull of 1356</button>
+            </div>
         </div>
         <div id="poland-text-container" class="tooltip">
             <h3 class="tooltip">Poland</h3>
@@ -487,14 +503,15 @@
              onclick="switchContent(polandQuestionEl,polandTextContainerEl)">
     </div>
     <div id="ottoman-tooltip" class="tooltip" onmouseout="hideTooltip(ottomanTooltipEl,ottoman1444ImgEl)">
-
         <div id="ottoman-question">
             <h3 class="question">Ottoman</h3>
             <p id="ottoman-question-text" class="question">Which major city did the Ottoman Empire capture in 1453,
                 marking the end of the Byzantine Empire?</p>
-            <button id="ottoman-answer-a" class="question">Constantinople</button>
-            <button id="ottoman-answer-b" class="question">Istanbul</button>
-            <button id="ottoman-answer-c" class="question">Vienna</button>
+            <div class="button-container">
+                <button id="ottoman-answer-a" class="question">Constantinople</button>
+                <button id="ottoman-answer-b" class="question">Istanbul</button>
+                <button id="ottoman-answer-c" class="question">Vienna</button>
+            </div>
         </div>
         <div id="ottoman-text-container" class="tooltip">
             <h3 class="tooltip">Ottoman</h3>
@@ -545,15 +562,59 @@
     </div>
 </div>
 <div id="resultBar">
-
+    <div id="icon-container">
+        <div id="muscovy-icon" class="icon-container">
+            <button class="button-container">
+                <img src="icons/130px-Shield_Muscovy.png">
+            </button>
+        </div>
+        <div id="denmark-icon" class="icon-container">
+            <button class="button-container">
+                <img src="icons/130px-Shield_Denmark.png">
+            </button>
+        </div>
+        <div id="england-icon" class="icon-container">
+            <button class="button-container">
+                <img src="icons/130px-Shield_England.png">
+            </button>
+        </div>
+        <div id="france-icon" class="icon-container">
+            <button class="button-container">
+                <img src="icons/130px-Shield_France.png">
+            </button>
+        </div>
+        <div id="castile-icon" class="icon-container">
+            <button class="button-container">
+                <img src="icons/130px-Shield_Castile.png">
+            </button>
+        </div>
+        <div id="brandenburg-icon" class="icon-container">
+            <button class="button-container">
+                <img src="icons/130px-Shield_Brandenburg.png">
+            </button>
+        </div>
+        <div id="austria-icon" class="icon-container">
+            <button class="button-container">
+                <img src="icons/130px-Shield_Austria.png">
+            </button>
+        </div>
+        <div id="poland-icon" class="icon-container">
+            <button class="button-container">
+                <img src="icons/130px-Shield_Poland.png">
+            </button>
+        </div>
+        <div id="ottoman-icon" class="icon-container">
+            <button class="button-container">
+                <img src="icons/130px-Shield_Ottomans.png">
+            </button>
+        </div>
+    </div>
 </div>
-<script src="js/index.js"></script>
 <script src="js/jQuery.js"></script>
+<script src="js/index.js"></script>
 <script src="js/jquery.rwdImageMaps.js"></script>
 <script src="js/mapHilight.js"></script>
-<script> $('#globalMap-1444-img').maphilight();
-</script>
-<script> $('img[usemap]').rwdImageMaps();
-</script>
+<script> $('#globalMap-1444-img').maphilight();</script>
+<script> $('img[usemap]').rwdImageMaps();</script>
 </body>
 </html>

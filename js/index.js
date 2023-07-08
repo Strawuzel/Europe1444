@@ -37,6 +37,10 @@ const franceTextContainerEl = document.getElementById("france-text-container");
 const castileTextContainerEl = document.getElementById("castile-text-container");
 const muscovyQuestionEL = document.getElementById("muscovy-question-text");
 
+/*const example = ["muscovy", "austria"];
+for(const x of example){
+    let teststring = "asdf"+x;
+}*/
 const questionArray = [
     questionMuscovy = {
         question: "Who was the ruler of Muscovy from 1462 to 1505 and expanded Muscovy's territory while challenging the authority of the Mongol-Tatar Golden Horde?",
@@ -592,7 +596,7 @@ function showTooltip(element, image) {
 
 function hideTooltip(element, image) {
     const cursor = document.elementFromPoint(event.clientX, event.clientY);
-    if (element !== cursor.parentElement && cursor.className !== "tooltip" && cursor.className !== "question") {
+    if (element !== cursor.parentElement && cursor.className !== "tooltip" && cursor.className !== "question" && cursor.className !== "button-container") {
         tooltipContainerEl.style.display = "none"
         element.style.display = "none"
         image.style.display = "none"
