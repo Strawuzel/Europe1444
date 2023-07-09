@@ -1,14 +1,21 @@
-rewrite texts for countries;
-need to find a way to make imageMapster.js work; prob ask;
-need to add bar with the 9 banner of the countries with 2 states (grey: not tried, colored: right answer given);
-improve responsiveness of resultBar-element;
-fixate tooltips on click; add closing button;
-reduce code duplication in html and javascript;
-need to style buttons;
-need to write function to print question-elements;
-switch from html-events to js-event-listener;
-fix padding for tooltips;
+#note
 
-ADDON: extend to 1792;
+need to find a way to make imageMapster.js work; prob ask;
+resultbar: 2 states (grey: not tried, colored: right answer given, click-event -> goto country-tooltip);
+
+
+adjust z-index in tooltip;
+fixate tooltips on click; add closing button;
+
+reduce code duplication in html and javascript;
+need to write function to print tooltip-elements;
+
+rework-html-structure
+switch from html-events to event-listener;
+
+
+
+ADDON: start date for Colonization / "Treaty of Tordesillas"
+ADDON: extend to 1792 Prussia / France / Austria-Hungary / ;
 
 

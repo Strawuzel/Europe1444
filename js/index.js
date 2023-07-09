@@ -573,9 +573,6 @@ countryIcons.forEach(iconData => {
 function showTooltip(element, image) {
     let x = event.clientX;
     let y = event.clientY;
-    /* if (tooltipContainerEl. .style.display === "grid"){
-         tooltipContainerEl.style.display = "none"
-     }*/
     tooltipContainerEl.style.display = "grid"
     element.style.display = "grid"
     image.style.display = "revert"
@@ -596,7 +593,7 @@ function showTooltip(element, image) {
 
 function hideTooltip(element, image) {
     const cursor = document.elementFromPoint(event.clientX, event.clientY);
-    if (element !== cursor.parentElement && cursor.className !== "tooltip" && cursor.className !== "question" && cursor.className !== "button-container") {
+    if (element !== cursor.parentElement && cursor.className !== "tooltip-contain" && cursor.className !== "tooltip" && cursor.className !== "question" && cursor.className !== "button-container" && cursor.className !== "tooltip-container") {
         tooltipContainerEl.style.display = "none"
         element.style.display = "none"
         image.style.display = "none"

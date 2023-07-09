@@ -42,15 +42,20 @@ img {
     width: 20vw;
     height: 15vw;
     z-index: 1;
-    justify-content: center;
 }
 
 #tooltip-container {
     display: none;
+    background-image: url("../rsc/images/map-background-transformed.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 6%;
     justify-content: center;
+    align-items: center;
     position: absolute;
     overflow: clip;
-    border-radius: 10%;
+    border-radius: 3%;
     z-index: 1;
 }
 
@@ -72,35 +77,26 @@ img {
     z-index: 1;
     justify-content: center;
 }
-
-#muscovy-text-container, #denmark-text-container, #brandenburg-text-container, #austria-text-container, #poland-text-container,
-#ottoman-text-container, #muscovy-question, #denmark-question, #brandenburg-question, #austria-question, #poland-question,
-#ottoman-question {
-    display: grid;
-    color: goldenrod;
-    justify-content: center;
-    font-weight: bold;
-    overflow: auto;
-    z-index: 1;
-    grid-column: 1;
-    grid-row: 1;
-    background-color: gainsboro;
-    width: 20vw;
-    height: 15vw;
+#england-text-container, #england-question {
+    width: 15vw;
+    height: 20vw;
 }
-
-#france-text-container, #castile-text-container, #france-question, #castile-question, #england-text-container, #england-question {
+.tooltip {
     display: grid;
     color: goldenrod;
     justify-content: center;
     font-weight: bold;
     overflow: auto;
+    border-radius: 3%;
     z-index: 1;
     grid-column: 2;
     grid-row: 1;
-    background-color: gainsboro;
+    background-color: transparent;
     width: 20vw;
     height: 15vw;
+}
+.tooltip-contain{
+
 }
 /*.tooltip::-webkit-scrollbar{
     background-color: saddlebrown;
@@ -126,11 +122,7 @@ button:hover{
     border-color: white;
 }
 
-#england-text-container, #england-question {
 
-    width: 15vw;
-    height: 20vw;
-}
 
 #muscovy-tooltip, #denmark-tooltip, #france-tooltip, #castile-tooltip, #brandenburg-tooltip,
 #austria-tooltip, #poland-tooltip, #ottoman-tooltip, #england-tooltip {
@@ -139,19 +131,19 @@ button:hover{
 }
 
 
-#muscovy-tooltip img, #poland-tooltip img, #ottoman-tooltip img, #austria-tooltip img, #denmark-tooltip img,
-#brandenburg-tooltip img {
-    grid-column: 2;
+.tooltip-image {
+    border-radius: 1%;
+    grid-column: 1;
     grid-row: 1;
 }
 
 
-#muscovy-tooltip p, #poland-tooltip p, #ottoman-tooltip p, #austria-tooltip p, #denmark-tooltip p,
+/*#muscovy-tooltip p, #poland-tooltip p, #ottoman-tooltip p, #austria-tooltip p, #denmark-tooltip p,
 #brandenburg-tooltip p {
     margin: 2vw;
     grid-column: 1;
     grid-row: 2;
-}
+}*/
 
 p {
     line-height: 1.2;
