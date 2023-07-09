@@ -25,7 +25,7 @@ map {
 }
 
 h3 {
-    display: grid;
+    display: flex;
     justify-content: center;
     font-size: xx-large;
 }
@@ -52,11 +52,10 @@ img {
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: center;
-    padding: 6%;
+    padding: 4% 4%;
     justify-content: center;
     align-items: center;
     position: absolute;
-    overflow: clip;
     border-radius: 3%;
     z-index: 1;
 }
@@ -93,10 +92,11 @@ img {
     justify-content: center;
     font-weight: bold;
     overflow: auto;
+    scroll-behavior: smooth;
     border-radius: 3%;
     z-index: 1;
     grid-column: 2;
-    grid-row: 1;
+    grid-row:1;
     background-color: transparent;
     width: 20vw;
     height: 15vw;
@@ -113,7 +113,7 @@ img {
 }
 
 .tooltip-contain {
-
+grid-gap: 0.5vw;
 }
 
 /*.tooltip::-webkit-scrollbar{
@@ -156,16 +156,8 @@ button:hover {
 .tooltip-image {
     border-radius: 1%;
     grid-column: 1;
-    grid-row: 1;
+    grid-row: 1
 }
-
-
-/*#muscovy-tooltip p, #poland-tooltip p, #ottoman-tooltip p, #austria-tooltip p, #denmark-tooltip p,
-#brandenburg-tooltip p {
-    margin: 2vw;
-    grid-column: 1;
-    grid-row: 2;
-}*/
 
 p {
     line-height: 1.2;
@@ -173,6 +165,6 @@ p {
 }
 
 h1 {
-    display: grid;
+    display: flex;
     justify-content: center;
 }

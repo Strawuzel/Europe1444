@@ -78,8 +78,6 @@ const questionArray = [
         answer: "Constantinople"
     }
 ];
-
-
 const tooltips = [
     {
         tooltipEl: "muscovyTooltipEl",
@@ -550,33 +548,53 @@ const countryIcons = [
     {src: "icons/130px-Shield_Ottomans.png"}
 ];
 countryIcons.forEach(iconData => {
-    // Create a new icon container div
     const resultBarEl = document.getElementById("resultBar")
     const iconContainer = document.createElement("icon-container");
     iconContainer.classList.add("icon-container");
 
-    // Create a new <img> element
     const imgElement = document.createElement("img");
-
-    // Set the source attribute of the <img> element to the icon source
     imgElement.src = iconData.src;
-
-    // Append the <img> element to the icon container
     iconContainer.appendChild(imgElement);
-
-    // Append the icon container to the body or another desired parent element
     resultBarEl.appendChild(iconContainer);
 });
 
-const tooltipContainer = document.getElementById('tooltip-container');
+const tooltipContainer = document.getElementById("tooltip-container");
 const toggleButton = document.getElementById("toggle-button");
+
 toggleButton.addEventListener('click', function () {
-    // Toggle the visibility of the tooltip container
-    
-    tooltipContainer.style.display = tooltipContainer.style.display === 'none' ? 'grid' : 'none';
+    const elements = document.getElementsByClassName("tooltip-contain");
+    for (let i = 0; i < elements.length; i++) {
+        elements[i].style.display = 'none';
+    }
+    const mapElements =document.getElementsByClassName("map");
+    for (let i = 0; i < mapElements.length; i++) {
+        mapElements[i].style.display = 'none';
+    }
+    tooltipContainer.style.display = tooltipContainer.style.display === "none" ? "grid" : "none";
 
 });
 
+
+const map = document.getElementById("map");
+const areas = map.getElementsByClassName("country-area");
+Array.from(areas).forEach(area => {
+    area.addEventListener("click", handleAreaClick);
+});
+function handleAreaClick(event) {
+    // Get the country associated with the clicked area
+    const country = event.target.getAttribute("title");
+    openTooltip(country)
+/*
+    showTooltip(country);
+*/
+}
+
+// Function to open a tooltip element based on the country
+function openTooltip(country) {
+    // Implement your logic to open the tooltip for the specific country
+    // You can show/hide the tooltip, update its content, or perform any other action
+    console.log("Tooltip opened for", country);
+}
 
 
 
@@ -599,15 +617,6 @@ function showTooltip(element, image) {
     tooltipContainerEl.style.left = x + "px";
     tooltipContainerEl.style.top = y + "px";
 
-}
-
-function hideTooltip(element, image) {
-    const cursor = document.elementFromPoint(event.clientX, event.clientY);
-    if (element !== cursor.parentElement && cursor.className !== "tooltip-contain" && cursor.className !== "tooltip" && cursor.className !== "question" && cursor.className !== "button-container" && cursor.className !== "tooltip-container") {
-        tooltipContainerEl.style.display = "none"
-        element.style.display = "none"
-        image.style.display = "none"
-    }
 }
 
 function switchContent(element, switchElement) {
