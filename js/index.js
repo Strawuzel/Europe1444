@@ -572,7 +572,9 @@ const tooltipContainer = document.getElementById('tooltip-container');
 const toggleButton = document.getElementById("toggle-button");
 toggleButton.addEventListener('click', function () {
     // Toggle the visibility of the tooltip container
+    
     tooltipContainer.style.display = tooltipContainer.style.display === 'none' ? 'grid' : 'none';
+
 });
 
 
