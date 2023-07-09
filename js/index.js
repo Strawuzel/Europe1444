@@ -35,7 +35,6 @@ const denmarkTextContainerEl = document.getElementById("denmark-text-container")
 const englandTextContainerEl = document.getElementById("england-text-container");
 const franceTextContainerEl = document.getElementById("france-text-container");
 const castileTextContainerEl = document.getElementById("castile-text-container");
-const muscovyQuestionEL = document.getElementById("muscovy-question-text");
 
 /*const example = ["muscovy", "austria"];
 for(const x of example){
@@ -568,6 +567,15 @@ countryIcons.forEach(iconData => {
     // Append the icon container to the body or another desired parent element
     resultBarEl.appendChild(iconContainer);
 });
+
+const tooltipContainer = document.getElementById('tooltip-container');
+const toggleButton = document.getElementById("toggle-button");
+toggleButton.addEventListener('click', function () {
+    // Toggle the visibility of the tooltip container
+    tooltipContainer.style.display = tooltipContainer.style.display === 'none' ? 'grid' : 'none';
+});
+
+
 
 
 function showTooltip(element, image) {
