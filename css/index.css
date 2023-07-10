@@ -18,7 +18,7 @@ h1 {
 
 }
 
-map {
+.map {
     justify-content: center;
     position: relative;
     z-index: 0;
@@ -113,7 +113,9 @@ img {
 }
 
 .tooltip-contain {
+    display: none;
     grid-gap: 0.5vw;
+    z-index: 1;
 }
 
 button {
@@ -140,13 +142,6 @@ button {
 button:hover {
     opacity: 90%;
     border-color: white;
-}
-
-
-#muscovy-tooltip, #denmark-tooltip, #france-tooltip, #castile-tooltip, #brandenburg-tooltip,
-#austria-tooltip, #poland-tooltip, #ottoman-tooltip, #england-tooltip {
-    display: none;
-    z-index: 1;
 }
 
 

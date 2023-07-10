@@ -80,14 +80,14 @@ const questionArray = [
 ];
 const tooltips = [
     {
-        tooltipEl: "muscovyTooltipEl",
-        imageEl: "muscovy1444ImgEl",
+        tooltipEl: "muscovy-tooltip",
+        imageEl: "muscovy-1444-img",
         questionEl: "muscovyQuestionEl",
         textContainerEl: "muscovyTextContainerEl",
         questionTitle: "Muscovy",
         questionText: "Who was the ruler of Muscovy from 1462 to 1505 and expanded Muscovy's territory while challenging the authority of the Mongol-Tatar Golden Horde?",
         answers: ["Ivan the Terrible", "Ivan the Great", "Ivan IV"],
-        tooltipTitle: "Muscovy",
+        tooltipTitle: "muscovy",
         tooltipText: "In the 15th century, Muscovy (also known as the Grand Duchy of\n" +
             "                Moscow)\n" +
             "                experienced significant political, territorial, and cultural developments. Here are some key events and\n" +
@@ -131,14 +131,14 @@ const tooltips = [
         imageUrl: "rsc/images/1444/muscovy1444.jpg"
     },
     {
-        tooltipEl: "denmarkTooltipEl",
-        imageEl: "denmark1444ImgEl",
+        tooltipEl: "denmark-tooltip",
+        imageEl: "denmark-1444-img",
         questionEl: "denmarkQuestionEl",
         textContainerEl: "denmarkTextContainerEl",
         questionTitle: "Denmark",
         questionText: "The Øresund strait, located between Denmark and Sweden, played a significant role in trade and maritime activities during the 15th century. Which toll was established by Denmark to collect revenue from ships passing through the Øresund?",
         answers: ["Baltic Levy", "Sound Toll", "Trade Tariff"],
-        tooltipTitle: "Denmark",
+        tooltipTitle: "denmark",
         tooltipText: "In the 15th century, Denmark, under the rule of the Kalmar\n" +
             "                Union, experienced\n" +
             "                several significant events and developments. Here are some key highlights of what happened in Denmark\n" +
@@ -182,14 +182,14 @@ const tooltips = [
         imageUrl: "rsc/images/1444/denmark1444.jpg"
     },
     {
-        tooltipEl: "englandTooltipEl",
-        imageEl: "england1444ImgEl",
+        tooltipEl: "england-tooltip",
+        imageEl: "england-1444-img",
         questionEl: "englandQuestionEl",
         textContainerEl: "englandTextContainerEl",
         questionTitle: "England",
         questionText: "Which conflict in England, spanning from 1455 to 1487, was fought between the rival houses of Lancaster and York for control of the English throne?",
         answers: ["Wars of the Three Kingdoms", "Wars of the Roses and Thistles", "Wars of the Roses"],
-        tooltipTitle: "England",
+        tooltipTitle: "england",
         tooltipText: "The 15th century in England was a period of political and\n" +
             "                social changes,\n" +
             "                marked by significant events and developments. Here are some key highlights of what happened in England\n" +
@@ -234,14 +234,14 @@ const tooltips = [
         imageUrl: "rsc/images/1444/england1444.jpg"
     },
     {
-        tooltipEl: "franceTooltipEl",
-        imageEl: "france1444ImgEl",
+        tooltipEl: "france-tooltip",
+        imageEl: "france-1444-img",
         questionEl: "franceQuestionEl",
         textContainerEl: "franceTextContainerEl",
         questionTitle: "France",
         questionText: "Who played a significant role in the Hundred Years' War, leading the French forces to several victories before being captured and executed?",
         answers: ["Catherine de' Medici", "Joan of Arc", "Isabella of Castile"],
-        tooltipTitle: "France",
+        tooltipTitle: "france",
         tooltipText: "The 15th century was a transformative period for France, marked\n" +
             "                by significant\n" +
             "                political, cultural, and military events. Here are some key highlights of what happened in France during\n" +
@@ -286,14 +286,14 @@ const tooltips = [
         imageUrl: "rsc/images/1444/france1444.jpg"
     },
     {
-        tooltipEl: "castileTooltipEl",
-        imageEl: "castile1444ImgEl",
+        tooltipEl: "castile-tooltip",
+        imageEl: "castile-1444-img",
         questionEl: "castileQuestionEl",
         textContainerEl: "castileTextContainerEl",
         questionTitle: "Castile",
         questionText: "Who completed the Christian reconquest of the Iberian Peninsula by capturing the Emirate of Granada in 1492?",
         answers: ["Ferdinand II of Aragon", "Isabella I of Castile", "Philip II"],
-        tooltipTitle: "Castile",
+        tooltipTitle: "castile",
         tooltipText: "The 15th century was a crucial period for the Kingdom of\n" +
             "                Castile, which was\n" +
             "                part of the medieval Christian realms on the Iberian Peninsula. Here are some significant events and\n" +
@@ -337,14 +337,14 @@ const tooltips = [
         imageUrl: "rsc/images/1444/castile1444.jpg"
     },
     {
-        tooltipEl: "brandenburgTooltipEl",
-        imageEl: "brandenburg1444ImgEl",
+        tooltipEl: "brandenburg-tooltip",
+        imageEl: "brandenburg-1444-img",
         questionEl: "brandenburgQuestionEl",
         textContainerEl: "brandenburgTextContainerEl",
         questionTitle: "Brandenburg",
         questionText: "Which ruling dynasty gained control over the Duchy of Brandenburg and established a strong influence in the region?",
         answers: ["Habsburg", "Hohenzollern", "Bourbon"],
-        tooltipTitle: "Brandenburg",
+        tooltipTitle: "brandenburg",
         tooltipText: "In the 15th century, the Duchy of Brandenburg, located in\n" +
             "                what is now\n" +
             "                northeastern Germany, experienced significant political and territorial developments. Here are some key\n" +
@@ -385,14 +385,14 @@ const tooltips = [
         imageUrl: "rsc/images/1444/brandenburg1444.jpg"
     },
     {
-        tooltipEl: "austriaTooltipEl",
-        imageEl: "austria1444ImgEl",
+        tooltipEl: "austria-tooltip",
+        imageEl: "austria-1444-img",
         questionEl: "austriaQuestionEl",
         textContainerEl: "austriaTextContainerEl",
         questionTitle: "Austria",
         questionText: "Which ruling family consolidated their power in Austria during the 15th century?",
         answers: ["Habsburg", "Wittelsbach", "Hohenzollern"],
-        tooltipTitle: "Austria",
+        tooltipTitle: "austria",
         tooltipText: "In the 15th century, Austria was part of the Holy Roman\n" +
             "                Empire, which was a complex political entity in Central Europe. Here are some significant events and\n" +
             "                developments that occurred in Austria during that time:<br><br>\n" +
@@ -430,14 +430,14 @@ const tooltips = [
         imageUrl: "rsc/images/1444/austria1444.jpg"
     },
     {
-        tooltipEl: "polandTooltipEl",
-        imageEl: "poland1444ImgEl",
+        tooltipEl: "poland-tooltip",
+        imageEl: "poland-1444-img",
         questionEl: "polandQuestionEl",
         textContainerEl: "polandTextContainerEl",
         questionTitle: "Poland",
         questionText: "Which significant event in 1385 led to the personal union between Poland and the Grand Duchy of Lithuania?",
         answers: ["Union of Krewo", "Treaty of Tordesillas", "Golden Bull of 1356"],
-        tooltipTitle: "Poland",
+        tooltipTitle: "poland",
         tooltipText: "In the 15th century, Poland experienced significant political\n" +
             "                and social\n" +
             "                changes. Here are some key events and developments that occurred in Poland during that time:<br><br>\n" +
@@ -484,14 +484,14 @@ const tooltips = [
         imageUrl: "rsc/images/1444/poland1444.jpg"
     },
     {
-        tooltipEl: "ottomanTooltipEl",
-        imageEl: "ottoman1444ImgEl",
+        tooltipEl: "ottoman-tooltip",
+        imageEl: "ottoman-1444-img",
         questionEl: "ottomanQuestionEl",
         textContainerEl: "ottomanTextContainerEl",
         questionTitle: "Ottoman",
         questionText: "Which major city did the Ottoman Empire capture in 1453, marking the end of the Byzantine Empire?",
         answers: ["Constantinople", "Istanbul", "Vienna"],
-        tooltipTitle: "Ottoman",
+        tooltipTitle: "ottoman",
         tooltipText: "The 15th century was a crucial period for the Ottoman Empire,\n" +
             "                marked by\n" +
             "                significant expansions and important developments. Here are some key events that occurred in the Ottoman\n" +
@@ -548,7 +548,7 @@ const countryIcons = [
     {src: "icons/130px-Shield_Ottomans.png"}
 ];
 countryIcons.forEach(iconData => {
-    const resultBarEl = document.getElementById("resultBar")
+    const resultBarEl = document.getElementById("resultBar");
     const iconContainer = document.createElement("icon-container");
     iconContainer.classList.add("icon-container");
 
@@ -557,6 +557,54 @@ countryIcons.forEach(iconData => {
     iconContainer.appendChild(imgElement);
     resultBarEl.appendChild(iconContainer);
 });
+const mapAreas = [
+    {
+        coords: "1614,262,1584,286,1543,284,1487,308,1442,288,1430,247,1391,232,1367,257,1394,284,1423,308,1455,325,1462,359,1491,369,1558,359,1584,332,1621,357,1618,383,1670,393,1684,368,1747,381,1765,376,1784,347,1752,330,1764,271,1811,249,1891,257,1899,205,1916,190,1914,142,1825,134,1802,86,1730,66,1648,90,1630,86,1599,96,1579,152,1548,152,1545,191",
+        name: "muscovy"
+    },
+    {
+        coords: "759,244,711,266,703,322,737,329,754,342,776,359,799,364,820,356,825,335,843,334,867,337,886,346,901,342,877,318,886,308,920,305,923,293,852,291,828,252,811,249",
+        name: "denmark"
+    },
+    {
+        coords: "377,350,416,316,440,355,471,399,474,427,494,425,521,435,504,466,486,479,509,488,481,501,503,538,496,574,477,623,430,632,399,511,360,527,315,533,350,493,384,484,323,471,355,445,342,413,382,411,394,382,371,374,340,376",
+        name: "england"
+    },
+    {
+        coords: "503,567,521,551,548,543,606,558,618,611,582,609,572,624,574,658,589,679,608,677,620,695,648,733,591,772,552,785,511,799,442,787,472,746,462,714,440,695,416,655,479,662,465,636,489,624,491,599",
+        name: "france"
+    },
+    {
+        coords: "204,776,238,760,260,767,326,764,379,772,416,776,408,808,401,848,410,887,425,920,440,964,415,976,377,959,342,982,313,984,304,1023,286,1021,274,987,247,977,259,921,265,872,279,825,216,825",
+        name: "castile"
+    },
+    {
+        coords: "773,434,778,449,803,451,808,432,819,437,825,459,846,461,856,459,858,446,873,444,873,454,888,458,900,464,915,451,912,431,874,429,873,412,851,400,842,417,808,407,795,417,781,425",
+        name: "brandenburg"
+    },
+    {
+        coords: "864,577,880,579,888,567,907,560,927,567,946,569,949,591,949,608,934,613,924,649,907,659,890,657,893,677,895,696,869,696,854,704,841,681,847,660,834,652,798,660,773,655,761,642,763,626,783,625,798,632,822,630,846,625,861,615,868,596",
+        name: "austria"
+    },
+    {
+        coords: "929,417,922,451,939,473,959,480,976,493,996,507,1013,534,1012,553,1034,549,1069,549,1086,563,1115,566,1125,559,1168,583,1202,627,1207,602,1220,602,1220,585,1244,580,1278,600,1274,578,1271,542,1220,554,1188,531,1163,515,1156,498,1174,458,1132,483,1103,464,1085,442,1102,439,1108,405,1052,427,1029,422,996,432,983,417,946,398",
+        name: "poland"
+    },
+    {
+        coords:"1020,875,1049,919,1086,919,1107,939,1120,928,1124,906,1108,880,1120,873,1134,885,1152,890,1144,870,1159,863,1178,858,1203,867,1222,868,1207,887,1217,906,1235,906,1237,933,1237,948,1224,950,1244,963,1246,982,1244,994,1263,995,1279,1007,1293,1007,1302,1023,1324,1019,1337,1019,1346,999,1369,1004,1383,997,1364,985,1369,960,1361,941,1376,931,1405,919,1425,914,1449,934,1473,933,1501,924,1522,943,1551,912,1574,914,1574,897,1549,885,1551,873,1561,878,1554,858,1493,836,1491,858,1408,858,1398,833,1349,851,1308,850,1300,858,1296,882,1254,855,1244,836,1257,822,1256,804,1266,777,1285,768,1285,751,1291,729,1291,719,1303,724,1313,717,1312,704,1273,697,1273,733,1234,744,1215,761,1171,765,1127,758,1108,717,1086,739,1098,765,1115,775,1108,804,1078,817,1049,833,1059,855,1049,867",
+        name: "ottoman"
+    }
+]
+const map = document.getElementById("map");
+mapAreas.forEach(area => {
+
+    const areaItem = document.createElement("area");
+    areaItem.setAttribute("title", area.name)
+    areaItem.setAttribute("shape", "poly");
+    areaItem.setAttribute("coords", area.coords)
+    areaItem.classList.add("country-area");
+    map.appendChild(areaItem);
+})
 
 const tooltipContainer = document.getElementById("tooltip-container");
 const toggleButton = document.getElementById("toggle-button");
@@ -566,39 +614,35 @@ toggleButton.addEventListener('click', function () {
     for (let i = 0; i < elements.length; i++) {
         elements[i].style.display = 'none';
     }
-    const mapElements =document.getElementsByClassName("map");
+    const mapElements = document.getElementsByClassName("country-area");
     for (let i = 0; i < mapElements.length; i++) {
         mapElements[i].style.display = 'none';
     }
     tooltipContainer.style.display = tooltipContainer.style.display === "none" ? "grid" : "none";
-
 });
 
-
-const map = document.getElementById("map");
 const areas = map.getElementsByClassName("country-area");
 Array.from(areas).forEach(area => {
     area.addEventListener("click", handleAreaClick);
 });
+
 function handleAreaClick(event) {
-    // Get the country associated with the clicked area
     const country = event.target.getAttribute("title");
-    openTooltip(country)
-/*
-    showTooltip(country);
-*/
+        showTooltip(country);
 }
 
-// Function to open a tooltip element based on the country
-function openTooltip(country) {
-    // Implement your logic to open the tooltip for the specific country
-    // You can show/hide the tooltip, update its content, or perform any other action
-    console.log("Tooltip opened for", country);
-}
+function showTooltip(elementTitle) {
+    let element;
+    let image;
+    for (let i = 0; i < tooltips.length; i++) {
+        if (elementTitle === tooltips[i].tooltipTitle){
+            element = document.getElementById(tooltips[i].tooltipEl);
+            image = document.getElementById(tooltips[i].imageEl);
+        }
+    }
+    console.log(element)
+    console.log(image)
 
-
-
-function showTooltip(element, image) {
     let x = event.clientX;
     let y = event.clientY;
     tooltipContainerEl.style.display = "grid"
