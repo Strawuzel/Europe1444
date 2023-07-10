@@ -652,6 +652,7 @@ function showTooltip(tooltipTitle) {
     let image;
     let question;
     let textContainer;
+
     for (let i = 0; i < tooltipsContainer.childNodes.length; i++) {
         const childNode = tooltipsContainer.childNodes[i]
         if (childNode.style && childNode.style.display === "grid") {
