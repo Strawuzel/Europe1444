@@ -10,9 +10,8 @@ backend: eventListener for question-button. if value onclick === country-object.
 
 
 reduce code duplication in html and javascript;
-need to write function to print tooltip-elements;
-
 rework-html-structure
+need to write function to print tooltip-elements;
 
 add button to switch timeline;
 
