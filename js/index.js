@@ -573,7 +573,7 @@ const mapAreas = [
         name: "poland"
     },
     {
-        coords:"1020,875,1049,919,1086,919,1107,939,1120,928,1124,906,1108,880,1120,873,1134,885,1152,890,1144,870,1159,863,1178,858,1203,867,1222,868,1207,887,1217,906,1235,906,1237,933,1237,948,1224,950,1244,963,1246,982,1244,994,1263,995,1279,1007,1293,1007,1302,1023,1324,1019,1337,1019,1346,999,1369,1004,1383,997,1364,985,1369,960,1361,941,1376,931,1405,919,1425,914,1449,934,1473,933,1501,924,1522,943,1551,912,1574,914,1574,897,1549,885,1551,873,1561,878,1554,858,1493,836,1491,858,1408,858,1398,833,1349,851,1308,850,1300,858,1296,882,1254,855,1244,836,1257,822,1256,804,1266,777,1285,768,1285,751,1291,729,1291,719,1303,724,1313,717,1312,704,1273,697,1273,733,1234,744,1215,761,1171,765,1127,758,1108,717,1086,739,1098,765,1115,775,1108,804,1078,817,1049,833,1059,855,1049,867",
+        coords: "1020,875,1049,919,1086,919,1107,939,1120,928,1124,906,1108,880,1120,873,1134,885,1152,890,1144,870,1159,863,1178,858,1203,867,1222,868,1207,887,1217,906,1235,906,1237,933,1237,948,1224,950,1244,963,1246,982,1244,994,1263,995,1279,1007,1293,1007,1302,1023,1324,1019,1337,1019,1346,999,1369,1004,1383,997,1364,985,1369,960,1361,941,1376,931,1405,919,1425,914,1449,934,1473,933,1501,924,1522,943,1551,912,1574,914,1574,897,1549,885,1551,873,1561,878,1554,858,1493,836,1491,858,1408,858,1398,833,1349,851,1308,850,1300,858,1296,882,1254,855,1244,836,1257,822,1256,804,1266,777,1285,768,1285,751,1291,729,1291,719,1303,724,1313,717,1312,704,1273,697,1273,733,1234,744,1215,761,1171,765,1127,758,1108,717,1086,739,1098,765,1115,775,1108,804,1078,817,1049,833,1059,855,1049,867",
         name: "ottoman"
     }
 ]
@@ -606,7 +606,7 @@ Array.from(areas).forEach(area => {
 
 function handleAreaClick(event) {
     const country = event.target.getAttribute("title");
-        showTooltip(country);
+    showTooltip(country);
 }
 
 function showTooltip(elementTitle) {
@@ -616,21 +616,21 @@ function showTooltip(elementTitle) {
     let textContainer;
     for (let i = 0; i < tooltipContainerEl.childNodes.length; i++) {
         const childNode = tooltipContainerEl.childNodes[i]
-        if (childNode.style && childNode.style.display === "grid"){
+        if (childNode.style && childNode.style.display === "grid") {
             childNode.style.display = "none"
         }
     }
     for (let i = 0; i < tooltips.length; i++) {
-        if (elementTitle === tooltips[i].tooltipTitle){
+        if (elementTitle === tooltips[i].tooltipTitle) {
             element = document.getElementById(tooltips[i].tooltipEl);
             image = document.getElementById(tooltips[i].imageEl);
             question = document.getElementById(tooltips[i].questionEl);
             textContainer = document.getElementById(tooltips[i].textContainerEl);
         }
-
     }
-    if (textContainer.style.display === "none"){
-        switchContent(question,textContainer)
+    //check if question-container is displayed. if so switch to text-container
+    if (textContainer.style.display === "none") {
+        switchContent(question, textContainer)
     }
 
     let x = event.clientX;
@@ -654,13 +654,34 @@ function showTooltip(elementTitle) {
 
 }
 
+const tooltipImages = document.getElementsByClassName("tooltip-image");
+for (let i = 0; i < tooltipImages.length; i++) {
+    tooltipImages[i].addEventListener("click", handleImageClick);
+}
+
+function handleImageClick(event) {
+    const imageID = event.target.getAttribute("id");
+    let element, switchElement;
+
+    for (let i = 0; i < tooltips.length; i++) {
+        if (imageID === tooltips[i].imageEl) {
+            element = tooltips[i].textContainerEl;
+            switchElement = tooltips[i].questionEl;
+        }
+    }
+    element = document.getElementById(element);
+    switchElement = document.getElementById(switchElement);
+    switchContent(element, switchElement)
+}
+
 function switchContent(element, switchElement) {
-    if (element.style.display === "grid") {
-        element.style.display = "none"
-        switchElement.style.display = "grid"
-    } else {
-        element.style.display = "grid"
+
+    if (switchElement.style.display === "grid") {
         switchElement.style.display = "none"
+        element.style.display = "grid"
+    } else {
+        switchElement.style.display = "grid"
+        element.style.display = "none"
     }
 }
 
