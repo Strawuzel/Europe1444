@@ -1,21 +1,22 @@
 #note
 
 need to find a way to make imageMapster.js work; prob ask;
-resultbar: 2 states (grey: not tried, colored: right answer given, click-event -> goto country-tooltip);
 
+resultBar: 2 states (grey: not tried, colored: right answer given);
+resultBar icons: add them to the country-objects and adjust printing-function / add click-event -> goto country-tooltip;
+resultBar background: look for fitting background-img
 
-adjust z-index in tooltip;
-fixate tooltips on click; add closing button;
+backend: eventListener for question-button. if value onclick === country-object.rightAnswer manipulate greyscale on country-icon;
+
 
 reduce code duplication in html and javascript;
 need to write function to print tooltip-elements;
 
 rework-html-structure
-switch from html-events to event-listener;
 
+add button to switch timeline;
 
-ADDON: Tamriel
 ADDON: start date for Colonization / "Treaty of Tordesillas"
 ADDON: extend to 1792 Prussia / France / Austria-Hungary / ;
 
-
+ADDON: Tamriel

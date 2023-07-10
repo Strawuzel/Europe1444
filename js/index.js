@@ -1,27 +1,4 @@
 const tooltipContainerEl = document.getElementById("tooltip-container");
-const muscovyQuestionEl = document.getElementById("muscovy-question");
-const austriaQuestionEl = document.getElementById("austria-question");
-const ottomanQuestionEl = document.getElementById("ottoman-question");
-const polandQuestionEl = document.getElementById("poland-question");
-const brandenburgQuestionEl = document.getElementById("brandenburg-question");
-const denmarkQuestionEl = document.getElementById("denmark-question");
-const englandQuestionEl = document.getElementById("england-question");
-const franceQuestionEl = document.getElementById("france-question");
-const castileQuestionEl = document.getElementById("castile-question");
-const muscovyTextContainerEl = document.getElementById("muscovy-text-container");
-const austriaTextContainerEl = document.getElementById("austria-text-container");
-const ottomanTextContainerEl = document.getElementById("ottoman-text-container");
-const polandTextContainerEl = document.getElementById("poland-text-container");
-const brandenburgTextContainerEl = document.getElementById("brandenburg-text-container");
-const denmarkTextContainerEl = document.getElementById("denmark-text-container");
-const englandTextContainerEl = document.getElementById("england-text-container");
-const franceTextContainerEl = document.getElementById("france-text-container");
-const castileTextContainerEl = document.getElementById("castile-text-container");
-
-/*const example = ["muscovy", "austria"];
-for(const x of example){
-    let teststring = "asdf"+x;
-}*/
 const questionArray = [
     questionMuscovy = {
         question: "Who was the ruler of Muscovy from 1462 to 1505 and expanded Muscovy's territory while challenging the authority of the Mongol-Tatar Golden Horde?",
