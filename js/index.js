@@ -1,21 +1,3 @@
-/*const muscovy1444ImgEl = document.getElementById("muscovy-1444-img")
-const austria1444ImgEl = document.getElementById("austria-1444-img");
-const ottoman1444ImgEl = document.getElementById("ottoman-1444-img");
-const poland1444ImgEl = document.getElementById("poland-1444-img");
-const brandenburg1444ImgEl = document.getElementById("brandenburg-1444-img");
-const denmark1444ImgEl = document.getElementById("denmark-1444-img");
-const england1444ImgEl = document.getElementById("england-1444-img");
-const france1444ImgEl = document.getElementById("france-1444-img");
-const castile1444ImgEl = document.getElementById("castile-1444-img");
-const muscovyTooltipEl = document.getElementById("muscovy-tooltip");
-const austriaTooltipEl = document.getElementById("austria-tooltip");
-const ottomanTooltipEl = document.getElementById("ottoman-tooltip");
-const polandTooltipEl = document.getElementById("poland-tooltip");
-const brandenburgTooltipEl = document.getElementById("brandenburg-tooltip");
-const denmarkTooltipEl = document.getElementById("denmark-tooltip");
-const englandTooltipEl = document.getElementById("england-tooltip");
-const franceTooltipEl = document.getElementById("france-tooltip");
-const castileTooltipEl = document.getElementById("castile-tooltip");*/
 const tooltipContainerEl = document.getElementById("tooltip-container");
 const muscovyQuestionEl = document.getElementById("muscovy-question");
 const austriaQuestionEl = document.getElementById("austria-question");
@@ -614,10 +596,6 @@ toggleButton.addEventListener('click', function () {
     for (let i = 0; i < elements.length; i++) {
         elements[i].style.display = 'none';
     }
-    const mapElements = document.getElementsByClassName("country-area");
-    for (let i = 0; i < mapElements.length; i++) {
-        mapElements[i].style.display = 'none';
-    }
     tooltipContainer.style.display = tooltipContainer.style.display === "none" ? "grid" : "none";
 });
 
@@ -636,6 +614,12 @@ function showTooltip(elementTitle) {
     let image;
     let question;
     let textContainer;
+    for (let i = 0; i < tooltipContainerEl.childNodes.length; i++) {
+        const childNode = tooltipContainerEl.childNodes[i]
+        if (childNode.style && childNode.style.display === "grid"){
+            childNode.style.display = "none"
+        }
+    }
     for (let i = 0; i < tooltips.length; i++) {
         if (elementTitle === tooltips[i].tooltipTitle){
             element = document.getElementById(tooltips[i].tooltipEl);
@@ -645,13 +629,10 @@ function showTooltip(elementTitle) {
         }
 
     }
-    console.log(question);
-    console.log(textContainer);
-    console.log(element);
-    console.log(image);
     if (textContainer.style.display === "none"){
         switchContent(question,textContainer)
     }
+
     let x = event.clientX;
     let y = event.clientY;
     tooltipContainerEl.style.display = "grid"
