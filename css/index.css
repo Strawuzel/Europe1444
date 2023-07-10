@@ -27,7 +27,9 @@ h1 {
 h3 {
     display: flex;
     justify-content: center;
+    align-items: start;
     font-size: xx-large;
+    margin-top: 0;
 }
 
 #globalMap-1444-img {
