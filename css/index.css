@@ -49,7 +49,7 @@ img {
     z-index: 1;
 }
 
-#tooltip-container {
+#tooltips-container {
     display: none;
     background-image: url("../rsc/images/map-background-transformed.png");
     background-size: 100%;
@@ -114,7 +114,7 @@ img {
     grid-column: 2;
 }
 
-.tooltip-contain {
+.tooltip-container {
     display: none;
     grid-gap: 0.5vw;
     z-index: 1;
@@ -143,7 +143,6 @@ button:hover {
     opacity: 90%;
     border-color: white;
 }
-
 
 .tooltip-image {
     border-radius: 1%;

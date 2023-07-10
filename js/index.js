@@ -1,4 +1,5 @@
-const tooltipContainerEl = document.getElementById("tooltip-container");
+const tooltipsContainer = document.getElementById("tooltips-container");
+const toggleButton = document.getElementById("toggle-button");
 const questionArray = [
     questionMuscovy = {
         question: "Who was the ruler of Muscovy from 1462 to 1505 and expanded Muscovy's territory while challenging the authority of the Mongol-Tatar Golden Horde?",
@@ -39,14 +40,14 @@ const questionArray = [
 ];
 const tooltips = [
     {
-        tooltipEl: "muscovy-tooltip",
-        imageEl: "muscovy-1444-img",
-        questionEl: "muscovy-question",
-        textContainerEl: "muscovy-text-container",
+        tooltip: "muscovy-tooltip",
+        image: "muscovy-1444-img",
+        question: "muscovy-question",
+        textContainer: "muscovy-text-container",
         questionTitle: "Muscovy",
         questionText: "Who was the ruler of Muscovy from 1462 to 1505 and expanded Muscovy's territory while challenging the authority of the Mongol-Tatar Golden Horde?",
         answers: ["Ivan the Terrible", "Ivan the Great", "Ivan IV"],
-        tooltipTitle: "muscovy",
+        tooltipTitle: "Muscovy",
         tooltipText: "In the 15th century, Muscovy (also known as the Grand Duchy of\n" +
             "                Moscow)\n" +
             "                experienced significant political, territorial, and cultural developments. Here are some key events and\n" +
@@ -90,10 +91,10 @@ const tooltips = [
         imageUrl: "rsc/images/1444/muscovy1444.jpg"
     },
     {
-        tooltipEl: "denmark-tooltip",
-        imageEl: "denmark-1444-img",
-        questionEl: "denmark-question",
-        textContainerEl: "denmark-text-container",
+        tooltip: "denmark-tooltip",
+        image: "denmark-1444-img",
+        question: "denmark-question",
+        textContainer: "denmark-text-container",
         questionTitle: "Denmark",
         questionText: "The Øresund strait, located between Denmark and Sweden, played a significant role in trade and maritime activities during the 15th century. Which toll was established by Denmark to collect revenue from ships passing through the Øresund?",
         answers: ["Baltic Levy", "Sound Toll", "Trade Tariff"],
@@ -141,10 +142,10 @@ const tooltips = [
         imageUrl: "rsc/images/1444/denmark1444.jpg"
     },
     {
-        tooltipEl: "england-tooltip",
-        imageEl: "england-1444-img",
-        questionEl: "england-question",
-        textContainerEl: "england-text-container",
+        tooltip: "england-tooltip",
+        image: "england-1444-img",
+        question: "england-question",
+        textContainer: "england-text-container",
         questionTitle: "England",
         questionText: "Which conflict in England, spanning from 1455 to 1487, was fought between the rival houses of Lancaster and York for control of the English throne?",
         answers: ["Wars of the Three Kingdoms", "Wars of the Roses and Thistles", "Wars of the Roses"],
@@ -193,10 +194,10 @@ const tooltips = [
         imageUrl: "rsc/images/1444/england1444.jpg"
     },
     {
-        tooltipEl: "france-tooltip",
-        imageEl: "france-1444-img",
-        questionEl: "france-question",
-        textContainerEl: "france-text-container",
+        tooltip: "france-tooltip",
+        image: "france-1444-img",
+        question: "france-question",
+        textContainer: "france-text-container",
         questionTitle: "France",
         questionText: "Who played a significant role in the Hundred Years' War, leading the French forces to several victories before being captured and executed?",
         answers: ["Catherine de' Medici", "Joan of Arc", "Isabella of Castile"],
@@ -245,10 +246,10 @@ const tooltips = [
         imageUrl: "rsc/images/1444/france1444.jpg"
     },
     {
-        tooltipEl: "castile-tooltip",
-        imageEl: "castile-1444-img",
-        questionEl: "castile-question",
-        textContainerEl: "castile-text-container",
+        tooltip: "castile-tooltip",
+        image: "castile-1444-img",
+        question: "castile-question",
+        textContainer: "castile-text-container",
         questionTitle: "Castile",
         questionText: "Who completed the Christian reconquest of the Iberian Peninsula by capturing the Emirate of Granada in 1492?",
         answers: ["Ferdinand II of Aragon", "Isabella I of Castile", "Philip II"],
@@ -296,10 +297,10 @@ const tooltips = [
         imageUrl: "rsc/images/1444/castile1444.jpg"
     },
     {
-        tooltipEl: "brandenburg-tooltip",
-        imageEl: "brandenburg-1444-img",
-        questionEl: "brandenburg-question",
-        textContainerEl: "brandenburg-text-container",
+        tooltip: "brandenburg-tooltip",
+        image: "brandenburg-1444-img",
+        question: "brandenburg-question",
+        textContainer: "brandenburg-text-container",
         questionTitle: "Brandenburg",
         questionText: "Which ruling dynasty gained control over the Duchy of Brandenburg and established a strong influence in the region?",
         answers: ["Habsburg", "Hohenzollern", "Bourbon"],
@@ -344,10 +345,10 @@ const tooltips = [
         imageUrl: "rsc/images/1444/brandenburg1444.jpg"
     },
     {
-        tooltipEl: "austria-tooltip",
-        imageEl: "austria-1444-img",
-        questionEl: "austria-question",
-        textContainerEl: "austria-text-container",
+        tooltip: "austria-tooltip",
+        image: "austria-1444-img",
+        question: "austria-question",
+        textContainer: "austria-text-container",
         questionTitle: "Austria",
         questionText: "Which ruling family consolidated their power in Austria during the 15th century?",
         answers: ["Habsburg", "Wittelsbach", "Hohenzollern"],
@@ -389,10 +390,10 @@ const tooltips = [
         imageUrl: "rsc/images/1444/austria1444.jpg"
     },
     {
-        tooltipEl: "poland-tooltip",
-        imageEl: "poland-1444-img",
-        questionEl: "poland-question",
-        textContainerEl: "poland-text-container",
+        tooltip: "poland-tooltip",
+        image: "poland-1444-img",
+        question: "poland-question",
+        textContainer: "poland-text-container",
         questionTitle: "Poland",
         questionText: "Which significant event in 1385 led to the personal union between Poland and the Grand Duchy of Lithuania?",
         answers: ["Union of Krewo", "Treaty of Tordesillas", "Golden Bull of 1356"],
@@ -443,13 +444,14 @@ const tooltips = [
         imageUrl: "rsc/images/1444/poland1444.jpg"
     },
     {
-        tooltipEl: "ottoman-tooltip",
-        imageEl: "ottoman-1444-img",
-        questionEl: "ottoman-question",
-        textContainerEl: "ottoman-text-container",
+        tooltip: "ottoman-tooltip",
+        image: "ottoman-1444-img",
+        question: "ottoman-question",
+        textContainer: "ottoman-text-container",
         questionTitle: "Ottoman",
         questionText: "Which major city did the Ottoman Empire capture in 1453, marking the end of the Byzantine Empire?",
         answers: ["Constantinople", "Istanbul", "Vienna"],
+        rightAnswer: "Constantinople",
         tooltipTitle: "ottoman",
         tooltipText: "The 15th century was a crucial period for the Ottoman Empire,\n" +
             "                marked by\n" +
@@ -494,7 +496,7 @@ const tooltips = [
             "                centuries to come.",
         imageUrl: "rsc/images/1444/ottoman1444.jpg"
     }
-]
+];
 const countryIcons = [
     {src: "icons/130px-Shield_Muscovy.png"},
     {src: "icons/130px-Shield_Denmark.png"},
@@ -506,16 +508,6 @@ const countryIcons = [
     {src: "icons/130px-Shield_Poland.png"},
     {src: "icons/130px-Shield_Ottomans.png"}
 ];
-countryIcons.forEach(iconData => {
-    const resultBarEl = document.getElementById("resultBar");
-    const iconContainer = document.createElement("icon-container");
-    iconContainer.classList.add("icon-container");
-
-    const imgElement = document.createElement("img");
-    imgElement.src = iconData.src;
-    iconContainer.appendChild(imgElement);
-    resultBarEl.appendChild(iconContainer);
-});
 const mapAreas = [
     {
         coords: "1614,262,1584,286,1543,284,1487,308,1442,288,1430,247,1391,232,1367,257,1394,284,1423,308,1455,325,1462,359,1491,369,1558,359,1584,332,1621,357,1618,383,1670,393,1684,368,1747,381,1765,376,1784,347,1752,330,1764,271,1811,249,1891,257,1899,205,1916,190,1914,142,1825,134,1802,86,1730,66,1648,90,1630,86,1599,96,1579,152,1548,152,1545,191",
@@ -553,10 +545,23 @@ const mapAreas = [
         coords: "1020,875,1049,919,1086,919,1107,939,1120,928,1124,906,1108,880,1120,873,1134,885,1152,890,1144,870,1159,863,1178,858,1203,867,1222,868,1207,887,1217,906,1235,906,1237,933,1237,948,1224,950,1244,963,1246,982,1244,994,1263,995,1279,1007,1293,1007,1302,1023,1324,1019,1337,1019,1346,999,1369,1004,1383,997,1364,985,1369,960,1361,941,1376,931,1405,919,1425,914,1449,934,1473,933,1501,924,1522,943,1551,912,1574,914,1574,897,1549,885,1551,873,1561,878,1554,858,1493,836,1491,858,1408,858,1398,833,1349,851,1308,850,1300,858,1296,882,1254,855,1244,836,1257,822,1256,804,1266,777,1285,768,1285,751,1291,729,1291,719,1303,724,1313,717,1312,704,1273,697,1273,733,1234,744,1215,761,1171,765,1127,758,1108,717,1086,739,1098,765,1115,775,1108,804,1078,817,1049,833,1059,855,1049,867",
         name: "ottoman"
     }
-]
+];
 const map = document.getElementById("map");
-mapAreas.forEach(area => {
+const tooltipImages = document.getElementsByClassName("tooltip-image");
+const areas = map.getElementsByClassName("country-area");
 
+countryIcons.forEach(iconData => {
+    const resultBar = document.getElementById("resultBar");
+    const iconContainer = document.createElement("icon-container");
+    iconContainer.classList.add("icon-container");
+
+    const imgElement = document.createElement("img");
+    imgElement.src = iconData.src;
+    iconContainer.appendChild(imgElement);
+    resultBar.appendChild(iconContainer);
+});
+
+mapAreas.forEach(area => {
     const areaItem = document.createElement("area");
     areaItem.setAttribute("title", area.name)
     areaItem.setAttribute("shape", "poly");
@@ -565,73 +570,136 @@ mapAreas.forEach(area => {
     map.appendChild(areaItem);
 })
 
-const tooltipContainer = document.getElementById("tooltip-container");
-const toggleButton = document.getElementById("toggle-button");
+//forEach to render-tooltips in html
+tooltips.forEach((tooltip) => {
 
+    const tooltipContainer = document.createElement("div");
+    const image = document.createElement("img");
+    const questionContainer = document.createElement("div");
+    const questionTitle = document.createElement("h3");
+    const questionText = document.createElement("p");
+    const textContainer = document.createElement("div");
+    const tooltipTitle = document.createElement("h3");
+    const tooltipText = document.createElement("p");
+    const buttonContainer = document.createElement("div");
+
+    tooltipContainer.classList.add("tooltip-container");
+    tooltipContainer.id = tooltip.tooltip;
+    image.classList.add("tooltip-image");
+    image.id = tooltip.image;
+    questionContainer.classList.add("tooltip");
+    questionContainer.id = tooltip.question;
+    questionTitle.classList.add("text");
+    questionText.classList.add("text");
+    textContainer.classList.add("tooltip");
+    textContainer.id = tooltip.textContainer;
+    tooltipTitle.classList.add("text");
+    tooltipText.classList.add("text");
+    buttonContainer.classList.add("button-container");
+
+    //connect container with resources
+    image.src = tooltip.imageUrl;
+    questionTitle.textContent = tooltip.questionTitle;
+    questionText.textContent = tooltip.questionText;
+    tooltipTitle.textContent = tooltip.tooltipTitle;
+    tooltipText.innerHTML = tooltip.tooltipText;
+
+    //create answer-buttons and place them in the buttonContainer
+    tooltip.answers.forEach((answer, index) => {
+        const answerButton = document.createElement("button");
+        answerButton.id = `muscovy-answer-${index + 1}`;
+        answerButton.classList.add("question-button");
+        answerButton.textContent = answer;
+        buttonContainer.appendChild(answerButton);
+    });
+
+    //structure the html-tree
+    tooltipContainer.appendChild(image);
+    tooltipContainer.appendChild(textContainer);
+    textContainer.appendChild(tooltipTitle);
+    textContainer.appendChild(tooltipText);
+    tooltipContainer.appendChild(questionContainer);
+    questionContainer.appendChild(questionTitle);
+    questionContainer.appendChild(questionText);
+    questionContainer.appendChild(buttonContainer);
+
+
+    tooltipsContainer.appendChild(tooltipContainer);
+});
+
+//toggleButton to close tooltips
 toggleButton.addEventListener('click', function () {
-    const elements = document.getElementsByClassName("tooltip-contain");
+    const elements = document.getElementsByClassName("tooltip-container");
     for (let i = 0; i < elements.length; i++) {
         elements[i].style.display = 'none';
     }
-    tooltipContainer.style.display = tooltipContainer.style.display === "none" ? "grid" : "none";
+    tooltipsContainer.style.display = tooltipsContainer.style.display === "none" ? "grid" : "none";
 });
 
-const areas = map.getElementsByClassName("country-area");
+//iterate through areas and add EventListener to each
 Array.from(areas).forEach(area => {
     area.addEventListener("click", handleAreaClick);
 });
-
+//get tooltipTitle from the event element and start showTooltip
 function handleAreaClick(event) {
-    const country = event.target.getAttribute("title");
-    showTooltip(country);
+    const tooltipTitle = event.target.getAttribute("tooltipTitle");
+    console.log("handleAreaClick: " + tooltipTitle)
+    showTooltip(tooltipTitle);
 }
 
-function showTooltip(elementTitle) {
+function showTooltip(tooltipTitle) {
     let element;
     let image;
     let question;
     let textContainer;
-    for (let i = 0; i < tooltipContainerEl.childNodes.length; i++) {
-        const childNode = tooltipContainerEl.childNodes[i]
+    for (let i = 0; i < tooltipsContainer.childNodes.length; i++) {
+        const childNode = tooltipsContainer.childNodes[i]
         if (childNode.style && childNode.style.display === "grid") {
             childNode.style.display = "none"
         }
     }
+
+/*    tooltips.forEach(tooltip => {
+
+    })*/
     for (let i = 0; i < tooltips.length; i++) {
-        if (elementTitle === tooltips[i].tooltipTitle) {
-            element = document.getElementById(tooltips[i].tooltipEl);
-            image = document.getElementById(tooltips[i].imageEl);
-            question = document.getElementById(tooltips[i].questionEl);
-            textContainer = document.getElementById(tooltips[i].textContainerEl);
+        if (tooltipTitle === tooltips[i].tooltipTitle) {
+            element = document.getElementById(tooltips[i].tooltip);
+            image = document.getElementById(tooltips[i].image);
+            question = document.getElementById(tooltips[i].question);
+            textContainer = document.getElementById(tooltips[i].textContainer);
         }
     }
-    //check if question-container is displayed. if so switch to text-container
+    console.log(element);
+    console.log(image);
+    console.log(question);
+    console.log(textContainer);
+
+    //check if question-container is displayed. if true switch to text-container
     if (textContainer.style.display === "none") {
         switchContent(question, textContainer)
     }
-
     let x = event.clientX;
     let y = event.clientY;
-    tooltipContainerEl.style.display = "grid"
+    tooltipsContainer.style.display = "grid"
     element.style.display = "grid"
     image.style.display = "revert"
     question.style.display = "none"
     const windowHeight = window.innerHeight;
     const windowWidth = window.innerWidth;
-    const tooltipHeight = tooltipContainerEl.offsetHeight;
-    const tooltipWidth = tooltipContainerEl.offsetWidth;
+    const tooltipHeight = tooltipsContainer.offsetHeight;
+    const tooltipWidth = tooltipsContainer.offsetWidth;
     if (x + tooltipWidth > windowWidth) {
         x = windowWidth - (tooltipWidth + 10)
     }
     if (y + tooltipHeight > windowHeight) {
         y = windowHeight - (tooltipHeight + 10)
     }
-    tooltipContainerEl.style.left = x + "px";
-    tooltipContainerEl.style.top = y + "px";
+    tooltipsContainer.style.left = x + "px";
+    tooltipsContainer.style.top = y + "px";
 
 }
 
-const tooltipImages = document.getElementsByClassName("tooltip-image");
 for (let i = 0; i < tooltipImages.length; i++) {
     tooltipImages[i].addEventListener("click", handleImageClick);
 }
@@ -641,9 +709,9 @@ function handleImageClick(event) {
     let element, switchElement;
 
     for (let i = 0; i < tooltips.length; i++) {
-        if (imageID === tooltips[i].imageEl) {
-            element = tooltips[i].textContainerEl;
-            switchElement = tooltips[i].questionEl;
+        if (imageID === tooltips[i].image) {
+            element = tooltips[i].textContainer;
+            switchElement = tooltips[i].question;
         }
     }
     element = document.getElementById(element);
