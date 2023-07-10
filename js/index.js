@@ -639,7 +639,7 @@ function showTooltip(elementTitle) {
         if (elementTitle === tooltips[i].tooltipTitle){
             element = document.getElementById(tooltips[i].tooltipEl);
             image = document.getElementById(tooltips[i].imageEl);
-            questionEl = document.getElementById(tooltips[i].questionEl)
+            questionEl = document.getElementById(tooltips[i].questionEl);
         }
     }
 
