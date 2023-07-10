@@ -1,4 +1,4 @@
-const muscovy1444ImgEl = document.getElementById("muscovy-1444-img")
+/*const muscovy1444ImgEl = document.getElementById("muscovy-1444-img")
 const austria1444ImgEl = document.getElementById("austria-1444-img");
 const ottoman1444ImgEl = document.getElementById("ottoman-1444-img");
 const poland1444ImgEl = document.getElementById("poland-1444-img");
@@ -15,7 +15,7 @@ const brandenburgTooltipEl = document.getElementById("brandenburg-tooltip");
 const denmarkTooltipEl = document.getElementById("denmark-tooltip");
 const englandTooltipEl = document.getElementById("england-tooltip");
 const franceTooltipEl = document.getElementById("france-tooltip");
-const castileTooltipEl = document.getElementById("castile-tooltip");
+const castileTooltipEl = document.getElementById("castile-tooltip");*/
 const tooltipContainerEl = document.getElementById("tooltip-container");
 const muscovyQuestionEl = document.getElementById("muscovy-question");
 const austriaQuestionEl = document.getElementById("austria-question");
@@ -82,7 +82,7 @@ const tooltips = [
     {
         tooltipEl: "muscovy-tooltip",
         imageEl: "muscovy-1444-img",
-        questionEl: "muscovyQuestionEl",
+        questionEl: "muscovy-question",
         textContainerEl: "muscovyTextContainerEl",
         questionTitle: "Muscovy",
         questionText: "Who was the ruler of Muscovy from 1462 to 1505 and expanded Muscovy's territory while challenging the authority of the Mongol-Tatar Golden Horde?",
@@ -133,7 +133,7 @@ const tooltips = [
     {
         tooltipEl: "denmark-tooltip",
         imageEl: "denmark-1444-img",
-        questionEl: "denmarkQuestionEl",
+        questionEl: "denmark-question",
         textContainerEl: "denmarkTextContainerEl",
         questionTitle: "Denmark",
         questionText: "The Øresund strait, located between Denmark and Sweden, played a significant role in trade and maritime activities during the 15th century. Which toll was established by Denmark to collect revenue from ships passing through the Øresund?",
@@ -184,7 +184,7 @@ const tooltips = [
     {
         tooltipEl: "england-tooltip",
         imageEl: "england-1444-img",
-        questionEl: "englandQuestionEl",
+        questionEl: "england-question",
         textContainerEl: "englandTextContainerEl",
         questionTitle: "England",
         questionText: "Which conflict in England, spanning from 1455 to 1487, was fought between the rival houses of Lancaster and York for control of the English throne?",
@@ -236,7 +236,7 @@ const tooltips = [
     {
         tooltipEl: "france-tooltip",
         imageEl: "france-1444-img",
-        questionEl: "franceQuestionEl",
+        questionEl: "france-question",
         textContainerEl: "franceTextContainerEl",
         questionTitle: "France",
         questionText: "Who played a significant role in the Hundred Years' War, leading the French forces to several victories before being captured and executed?",
@@ -288,7 +288,7 @@ const tooltips = [
     {
         tooltipEl: "castile-tooltip",
         imageEl: "castile-1444-img",
-        questionEl: "castileQuestionEl",
+        questionEl: "castile-question",
         textContainerEl: "castileTextContainerEl",
         questionTitle: "Castile",
         questionText: "Who completed the Christian reconquest of the Iberian Peninsula by capturing the Emirate of Granada in 1492?",
@@ -339,7 +339,7 @@ const tooltips = [
     {
         tooltipEl: "brandenburg-tooltip",
         imageEl: "brandenburg-1444-img",
-        questionEl: "brandenburgQuestionEl",
+        questionEl: "brandenburg-question",
         textContainerEl: "brandenburgTextContainerEl",
         questionTitle: "Brandenburg",
         questionText: "Which ruling dynasty gained control over the Duchy of Brandenburg and established a strong influence in the region?",
@@ -387,7 +387,7 @@ const tooltips = [
     {
         tooltipEl: "austria-tooltip",
         imageEl: "austria-1444-img",
-        questionEl: "austriaQuestionEl",
+        questionEl: "austria-question",
         textContainerEl: "austriaTextContainerEl",
         questionTitle: "Austria",
         questionText: "Which ruling family consolidated their power in Austria during the 15th century?",
@@ -432,7 +432,7 @@ const tooltips = [
     {
         tooltipEl: "poland-tooltip",
         imageEl: "poland-1444-img",
-        questionEl: "polandQuestionEl",
+        questionEl: "poland-question",
         textContainerEl: "polandTextContainerEl",
         questionTitle: "Poland",
         questionText: "Which significant event in 1385 led to the personal union between Poland and the Grand Duchy of Lithuania?",
@@ -486,7 +486,7 @@ const tooltips = [
     {
         tooltipEl: "ottoman-tooltip",
         imageEl: "ottoman-1444-img",
-        questionEl: "ottomanQuestionEl",
+        questionEl: "ottoman-question",
         textContainerEl: "ottomanTextContainerEl",
         questionTitle: "Ottoman",
         questionText: "Which major city did the Ottoman Empire capture in 1453, marking the end of the Byzantine Empire?",
@@ -634,20 +634,21 @@ function handleAreaClick(event) {
 function showTooltip(elementTitle) {
     let element;
     let image;
+    let questionEl;
     for (let i = 0; i < tooltips.length; i++) {
         if (elementTitle === tooltips[i].tooltipTitle){
             element = document.getElementById(tooltips[i].tooltipEl);
             image = document.getElementById(tooltips[i].imageEl);
+            questionEl = document.getElementById(tooltips[i].questionEl)
         }
     }
-    console.log(element)
-    console.log(image)
 
     let x = event.clientX;
     let y = event.clientY;
     tooltipContainerEl.style.display = "grid"
     element.style.display = "grid"
     image.style.display = "revert"
+    questionEl.style.display = "none"
     const windowHeight = window.innerHeight;
     const windowWidth = window.innerWidth;
     const tooltipHeight = tooltipContainerEl.offsetHeight;
