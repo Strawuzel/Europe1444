@@ -64,8 +64,7 @@ img {
 }
 
 #mapContainer {
-
-    border-radius: 10%;
+    border-radius: 3%;
     overflow: hidden;
     position: relative;
     margin-top: 2vw;
@@ -130,9 +129,6 @@ button {
 }
 
 .button-container {
-    /*
-    border: none;
-    */
     display: flex;
     justify-content: space-evenly;
     padding-bottom: 1vw;
@@ -157,7 +153,7 @@ button:hover {
 
 p {
     line-height: 1.2;
-    margin: 2vw;
+    margin: 1vw;
 }
 
 h1 {
