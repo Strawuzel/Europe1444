@@ -2,11 +2,8 @@
 
 need to find a way to get imageMapster.js work;
 
-resultBar: 2 states (grey: not tried, colored: right answer given);
-resultBar icons: add them to the country-objects and adjust render-function / add click-event -> goto country-tooltip;
+resultBar icons: add them to the country-objects and adjust render-function
 resultBar background: look for fitting background-img
-
-backend: eventListener for question-button. if value onclick === country-object.rightAnswer manipulate greyscale on country-icon;
 
 add button to switch timeline. switch background-image and display-positions to fit new background
 
