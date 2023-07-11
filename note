@@ -1,6 +1,6 @@
 #note
 
-need to find a way to make imageMapster.js work;
+need to find a way to get imageMapster.js work;
 
 resultBar: 2 states (grey: not tried, colored: right answer given);
 resultBar icons: add them to the country-objects and adjust render-function / add click-event -> goto country-tooltip;
@@ -12,9 +12,10 @@ bug-fix click-Event
 rework-html-structure
 need to write function to print tooltip-elements
 
-add button to switch timeline
+add button to switch timeline. switch background-image and display-positions to fit new background
 
 ADDON: start date for Colonization / "Treaty of Tordesillas"
 ADDON: extend to 1792 Prussia / France / Austria-Hungary /
 
 ADDON: Tamriel
+

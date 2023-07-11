@@ -1,6 +1,6 @@
 const tooltipsContainer = document.getElementById("tooltips-container");
 const toggleButton = document.getElementById("toggle-button");
-const questionArray = [
+/*const questionArray = [
     questionMuscovy = {
         question: "Who was the ruler of Muscovy from 1462 to 1505 and expanded Muscovy's territory while challenging the authority of the Mongol-Tatar Golden Horde?",
         answer: "Ivan the Great"
@@ -37,7 +37,7 @@ const questionArray = [
         question: "Which major city did the Ottoman Empire capture in 1453, marking the end of the Byzantine Empire?",
         answer: "Constantinople"
     }
-];
+];*/
 const tooltips = [
     {
         tooltip: "muscovy-tooltip",
@@ -498,15 +498,42 @@ const tooltips = [
     }
 ];
 const countryIcons = [
-    {src: "icons/130px-Shield_Muscovy.png"},
-    {src: "icons/130px-Shield_Denmark.png"},
-    {src: "icons/130px-Shield_England.png"},
-    {src: "icons/130px-Shield_France.png"},
-    {src: "icons/130px-Shield_Castile.png"},
-    {src: "icons/130px-Shield_Brandenburg.png"},
-    {src: "icons/130px-Shield_Austria.png"},
-    {src: "icons/130px-Shield_Poland.png"},
-    {src: "icons/130px-Shield_Ottomans.png"}
+    {
+        src: "icons/130px-Shield_Muscovy.png",
+        title: "Muscovy"
+    },
+    {
+        src: "icons/130px-Shield_Denmark.png",
+        title: "Denmark"
+    },
+    {
+        src: "icons/130px-Shield_England.png",
+        title: "England"
+    },
+    {
+        src: "icons/130px-Shield_France.png",
+        title: "France"
+    },
+    {
+        src: "icons/130px-Shield_Castile.png",
+        title: "Castile"
+    },
+    {
+        src: "icons/130px-Shield_Brandenburg.png",
+        title: "Brandenburg"
+    },
+    {
+        src: "icons/130px-Shield_Austria.png",
+        title: "Austria"
+    },
+    {
+        src: "icons/130px-Shield_Poland.png",
+        title: "Poland"
+    },
+    {
+        src: "icons/130px-Shield_Ottomans.png",
+        title: "Ottoman"
+    }
 ];
 const mapAreas = [
     {
@@ -553,10 +580,14 @@ const areas = map.getElementsByClassName("country-area");
 countryIcons.forEach(iconData => {
     const resultBar = document.getElementById("resultBar");
     const iconContainer = document.createElement("icon-container");
+/*    iconContainer.setAttribute("title", iconData.title)
+    iconContainer.addEventListener("click", handleAreaClick)*/
     iconContainer.classList.add("icon-container");
 
     const imgElement = document.createElement("img");
     imgElement.src = iconData.src;
+    imgElement.setAttribute("title", iconData.title)
+    imgElement.addEventListener("click", handleAreaClick)
     iconContainer.appendChild(imgElement);
     resultBar.appendChild(iconContainer);
 });
@@ -640,11 +671,11 @@ toggleButton.addEventListener('click', function () {
 Array.from(areas).forEach(area => {
     area.addEventListener("click", handleAreaClick);
 });
+
 //get tooltipTitle from the event element and start showTooltip
 function handleAreaClick(event) {
     console.log(event.target)
     const tooltipTitle = event.target.getAttribute("title");
-    console.log("handleAreaClick: " + tooltipTitle)
     showTooltip(tooltipTitle);
 }
 
@@ -654,16 +685,15 @@ function showTooltip(tooltipTitle) {
     let question;
     let textContainer;
 
-    for (let i= 0; i < tooltipsContainer.childNodes.length; i++) {
+    //search for the correct tooltip
+
+    for (let i = 0; i < tooltipsContainer.childNodes.length; i++) {
         const childNode = tooltipsContainer.childNodes[i]
         if (childNode.style && childNode.style.display === "grid") {
             childNode.style.display = "none"
         }
     }
 
-/*    tooltips.forEach(tooltip => {
-
-    })*/
     for (let i = 0; i < tooltips.length; i++) {
         if (tooltipTitle === tooltips[i].tooltipTitle) {
             element = document.getElementById(tooltips[i].tooltip);
@@ -672,22 +702,22 @@ function showTooltip(tooltipTitle) {
             textContainer = document.getElementById(tooltips[i].textContainer);
         }
     }
-    console.log(element);
-    console.log(image);
-    console.log(question);
-    console.log(textContainer);
-
 
     //check if question-container is displayed. if true switch to text-container
     if (textContainer.style.display === "none") {
         switchContent(question, textContainer)
     }
-    let x = event.clientX;
-    let y = event.clientY;
+    //switch style
     tooltipsContainer.style.display = "grid"
     element.style.display = "grid"
     image.style.display = "revert"
     question.style.display = "none"
+
+    //get mouse x,y and adjust tooltip-popup
+
+    let x = event.clientX;
+    let y = event.clientY;
+
     const windowHeight = window.innerHeight;
     const windowWidth = window.innerWidth;
     const tooltipHeight = tooltipsContainer.offsetHeight;
