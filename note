@@ -8,10 +8,6 @@ resultBar background: look for fitting background-img
 
 backend: eventListener for question-button. if value onclick === country-object.rightAnswer manipulate greyscale on country-icon;
 
-bug-fix click-Event
-rework-html-structure
-need to write function to print tooltip-elements
-
 add button to switch timeline. switch background-image and display-positions to fit new background
 
 ADDON: start date for Colonization / "Treaty of Tordesillas"

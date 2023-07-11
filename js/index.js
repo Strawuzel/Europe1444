@@ -497,7 +497,7 @@ const tooltips = [
         imageUrl: "rsc/images/1444/ottoman1444.jpg"
     }
 ];
-const countryIcons = [
+const countryIcons1444 = [
     {
         src: "icons/130px-Shield_Muscovy.png",
         title: "Muscovy"
@@ -535,7 +535,7 @@ const countryIcons = [
         title: "Ottoman"
     }
 ];
-const mapAreas = [
+const mapAreas1444 = [
     {
         coords: "1614,262,1584,286,1543,284,1487,308,1442,288,1430,247,1391,232,1367,257,1394,284,1423,308,1455,325,1462,359,1491,369,1558,359,1584,332,1621,357,1618,383,1670,393,1684,368,1747,381,1765,376,1784,347,1752,330,1764,271,1811,249,1891,257,1899,205,1916,190,1914,142,1825,134,1802,86,1730,66,1648,90,1630,86,1599,96,1579,152,1548,152,1545,191",
         name: "Muscovy"
@@ -573,11 +573,12 @@ const mapAreas = [
         name: "Ottoman"
     }
 ];
+
 const map = document.getElementById("map");
 const tooltipImages = document.getElementsByClassName("tooltip-image");
 const areas = map.getElementsByClassName("country-area");
 
-countryIcons.forEach(iconData => {
+countryIcons1444.forEach(iconData => {
     const resultBar = document.getElementById("resultBar");
     const iconContainer = document.createElement("icon-container");
 /*    iconContainer.setAttribute("title", iconData.title)
@@ -592,7 +593,7 @@ countryIcons.forEach(iconData => {
     resultBar.appendChild(iconContainer);
 });
 
-mapAreas.forEach(area => {
+mapAreas1444.forEach(area => {
     const areaItem = document.createElement("area");
     areaItem.setAttribute("title", area.name)
     areaItem.setAttribute("shape", "poly");
@@ -762,5 +763,6 @@ function switchContent(element, switchElement) {
         element.style.display = "none"
     }
 }
+
 
 
