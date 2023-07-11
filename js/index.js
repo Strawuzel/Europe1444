@@ -656,7 +656,7 @@ tooltips.forEach((tooltip) => {
     //create answer-buttons and place them in the buttonContainer
     tooltip.answers.forEach((answer, index) => {
         const answerButton = document.createElement("button");
-        answerButton.id = `muscovy-answer-${index + 1}`;
+        answerButton.id = tooltip.id +`-answer-${index + 1}`;
         answerButton.classList.add("question-button");
         answerButton.textContent = answer;
         buttonContainer.appendChild(answerButton);
@@ -703,8 +703,6 @@ Array.from(questionButtons).forEach(button => {
 function handleQuestionClick(event) {
     const button = event.target;
     const buttonValue = event.target.innerHTML;
-    console.log("value: " + buttonValue)
-    console.log("button: " + button)
     checkAnswer(buttonValue, button)
 }
 
