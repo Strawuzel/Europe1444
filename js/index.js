@@ -701,32 +701,40 @@ Array.from(questionButtons).forEach(button => {
 })
 
 function handleQuestionClick(event) {
+    const button = event.target;
     const buttonValue = event.target.innerHTML;
-    checkAnswer(buttonValue)
+    console.log("value: " + buttonValue)
+    console.log("button: " + button)
+    checkAnswer(buttonValue, button)
 }
 
-function checkAnswer(buttonValue) {
+function checkAnswer(buttonValue, button) {
     let country;
     for (let i = 0; i < tooltips.length; i++) {
         if (buttonValue === tooltips[i].rightAnswer) {
             country = tooltips[i].id
+            colorButton(button, "green")
+            setGrayScale(country)
+            break;
+        }
+        else {
+            colorButton(button,"red")
         }
     }
-    colorButton(country)
-    setGrayScale(country)
-}
-function colorButton(country){
 
+}
+
+function colorButton(button, color) {
+    button.style.backgroundColor = "" + color
 }
 
 function setGrayScale(country) {
     const iconContainer = document.getElementsByClassName("icon-container");
     let img;
-    Array.from(iconContainer).forEach(container =>{
+    Array.from(iconContainer).forEach(container => {
         container.getAttribute("title");
-        if (container.firstChild.getAttribute("title") === country){
+        if (container.firstChild.getAttribute("title") === country) {
             img = container.firstChild
-            console.log(img)
         }
     })
     img.style.filter = "grayscale(0%)"
