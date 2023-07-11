@@ -40,6 +40,7 @@ const toggleButton = document.getElementById("toggle-button");
 ];*/
 const tooltips = [
     {
+        id: "Muscovy",
         tooltip: "muscovy-tooltip",
         image: "muscovy-1444-img",
         question: "muscovy-question",
@@ -47,6 +48,7 @@ const tooltips = [
         questionTitle: "Muscovy",
         questionText: "Who was the ruler of Muscovy from 1462 to 1505 and expanded Muscovy's territory while challenging the authority of the Mongol-Tatar Golden Horde?",
         answers: ["Ivan the Terrible", "Ivan the Great", "Ivan IV"],
+        rightAnswer: "Ivan the Great",
         tooltipTitle: "Muscovy",
         tooltipText: "In the 15th century, Muscovy (also known as the Grand Duchy of\n" +
             "                Moscow)\n" +
@@ -91,6 +93,7 @@ const tooltips = [
         imageUrl: "rsc/images/1444/muscovy1444.jpg"
     },
     {
+        id: "Denmark",
         tooltip: "denmark-tooltip",
         image: "denmark-1444-img",
         question: "denmark-question",
@@ -98,6 +101,7 @@ const tooltips = [
         questionTitle: "Denmark",
         questionText: "The Øresund strait, located between Denmark and Sweden, played a significant role in trade and maritime activities during the 15th century. Which toll was established by Denmark to collect revenue from ships passing through the Øresund?",
         answers: ["Baltic Levy", "Sound Toll", "Trade Tariff"],
+        rightAnswer: "Sound Toll",
         tooltipTitle: "Denmark",
         tooltipText: "In the 15th century, Denmark, under the rule of the Kalmar\n" +
             "                Union, experienced\n" +
@@ -142,6 +146,7 @@ const tooltips = [
         imageUrl: "rsc/images/1444/denmark1444.jpg"
     },
     {
+        id: "England",
         tooltip: "england-tooltip",
         image: "england-1444-img",
         question: "england-question",
@@ -149,6 +154,7 @@ const tooltips = [
         questionTitle: "England",
         questionText: "Which conflict in England, spanning from 1455 to 1487, was fought between the rival houses of Lancaster and York for control of the English throne?",
         answers: ["Wars of the Three Kingdoms", "Wars of the Roses and Thistles", "Wars of the Roses"],
+        rightAnswer: "Wars of the Roses",
         tooltipTitle: "England",
         tooltipText: "The 15th century in England was a period of political and\n" +
             "                social changes,\n" +
@@ -194,6 +200,7 @@ const tooltips = [
         imageUrl: "rsc/images/1444/england1444.jpg"
     },
     {
+        id: "France",
         tooltip: "france-tooltip",
         image: "france-1444-img",
         question: "france-question",
@@ -201,6 +208,7 @@ const tooltips = [
         questionTitle: "France",
         questionText: "Who played a significant role in the Hundred Years' War, leading the French forces to several victories before being captured and executed?",
         answers: ["Catherine de' Medici", "Joan of Arc", "Isabella of Castile"],
+        rightAnswer: "Joan of Arc",
         tooltipTitle: "France",
         tooltipText: "The 15th century was a transformative period for France, marked\n" +
             "                by significant\n" +
@@ -246,6 +254,7 @@ const tooltips = [
         imageUrl: "rsc/images/1444/france1444.jpg"
     },
     {
+        id: "Castile",
         tooltip: "castile-tooltip",
         image: "castile-1444-img",
         question: "castile-question",
@@ -253,6 +262,7 @@ const tooltips = [
         questionTitle: "Castile",
         questionText: "Who completed the Christian reconquest of the Iberian Peninsula by capturing the Emirate of Granada in 1492?",
         answers: ["Ferdinand II of Aragon", "Isabella I of Castile", "Philip II"],
+        rightAnswer: "Ferdinand II of Aragon",
         tooltipTitle: "Castile",
         tooltipText: "The 15th century was a crucial period for the Kingdom of\n" +
             "                Castile, which was\n" +
@@ -297,6 +307,7 @@ const tooltips = [
         imageUrl: "rsc/images/1444/castile1444.jpg"
     },
     {
+        id: "Brandenburg",
         tooltip: "brandenburg-tooltip",
         image: "brandenburg-1444-img",
         question: "brandenburg-question",
@@ -304,6 +315,7 @@ const tooltips = [
         questionTitle: "Brandenburg",
         questionText: "Which ruling dynasty gained control over the Duchy of Brandenburg and established a strong influence in the region?",
         answers: ["Habsburg", "Hohenzollern", "Bourbon"],
+        rightAnswer: "Hohenzollern",
         tooltipTitle: "Brandenburg",
         tooltipText: "In the 15th century, the Duchy of Brandenburg, located in\n" +
             "                what is now\n" +
@@ -345,6 +357,7 @@ const tooltips = [
         imageUrl: "rsc/images/1444/brandenburg1444.jpg"
     },
     {
+        id: "Austria",
         tooltip: "austria-tooltip",
         image: "austria-1444-img",
         question: "austria-question",
@@ -352,6 +365,7 @@ const tooltips = [
         questionTitle: "Austria",
         questionText: "Which ruling family consolidated their power in Austria during the 15th century?",
         answers: ["Habsburg", "Wittelsbach", "Hohenzollern"],
+        rightAnswer: "Habsburg",
         tooltipTitle: "Austria",
         tooltipText: "In the 15th century, Austria was part of the Holy Roman\n" +
             "                Empire, which was a complex political entity in Central Europe. Here are some significant events and\n" +
@@ -390,6 +404,7 @@ const tooltips = [
         imageUrl: "rsc/images/1444/austria1444.jpg"
     },
     {
+        id: "Poland",
         tooltip: "poland-tooltip",
         image: "poland-1444-img",
         question: "poland-question",
@@ -397,6 +412,7 @@ const tooltips = [
         questionTitle: "Poland",
         questionText: "Which significant event in 1385 led to the personal union between Poland and the Grand Duchy of Lithuania?",
         answers: ["Union of Krewo", "Treaty of Tordesillas", "Golden Bull of 1356"],
+        rightAnswer: "Union of Krewo",
         tooltipTitle: "Poland",
         tooltipText: "In the 15th century, Poland experienced significant political\n" +
             "                and social\n" +
@@ -444,6 +460,7 @@ const tooltips = [
         imageUrl: "rsc/images/1444/poland1444.jpg"
     },
     {
+        id: "Ottoman",
         tooltip: "ottoman-tooltip",
         image: "ottoman-1444-img",
         question: "ottoman-question",
@@ -576,12 +593,13 @@ const mapAreas = [
 const map = document.getElementById("map");
 const tooltipImages = document.getElementsByClassName("tooltip-image");
 const areas = map.getElementsByClassName("country-area");
+const questionButtons = document.getElementsByClassName("question-button");
 
 countryIcons.forEach(iconData => {
     const resultBar = document.getElementById("resultBar");
     const iconContainer = document.createElement("icon-container");
-/*    iconContainer.setAttribute("title", iconData.title)
-    iconContainer.addEventListener("click", handleAreaClick)*/
+    /*    iconContainer.setAttribute("title", iconData.title)
+        iconContainer.addEventListener("click", handleAreaClick)*/
     iconContainer.classList.add("icon-container");
 
     const imgElement = document.createElement("img");
@@ -674,9 +692,46 @@ Array.from(areas).forEach(area => {
 
 //get tooltipTitle from the event element and start showTooltip
 function handleAreaClick(event) {
-    console.log(event.target)
     const tooltipTitle = event.target.getAttribute("title");
     showTooltip(tooltipTitle);
+}
+
+Array.from(questionButtons).forEach(button => {
+    button.addEventListener("click", handleQuestionClick)
+})
+
+function handleQuestionClick(event) {
+    const buttonValue = event.target.innerHTML;
+    checkAnswer(buttonValue)
+}
+
+function checkAnswer(buttonValue) {
+    let country;
+    for (let i = 0; i < tooltips.length; i++) {
+        if (buttonValue === tooltips[i].rightAnswer) {
+            country = tooltips[i].id
+        }
+    }
+    colorButton(country)
+    setGrayScale(country)
+}
+function colorButton(country){
+
+}
+
+function setGrayScale(country) {
+    const iconContainer = document.getElementsByClassName("icon-container");
+    let img;
+    Array.from(iconContainer).forEach(container =>{
+        container.getAttribute("title");
+        if (container.firstChild.getAttribute("title") === country){
+            img = container.firstChild
+            console.log(img)
+        }
+    })
+    img.style.filter = "grayscale(0%)"
+
+
 }
 
 function showTooltip(tooltipTitle) {
