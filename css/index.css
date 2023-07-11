@@ -113,6 +113,9 @@ img {
     background: transparent;
     grid-column: 2;
 }
+#timeline-button{
+
+}
 
 .tooltip-container {
     display: none;
