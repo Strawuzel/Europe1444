@@ -3245,7 +3245,7 @@ A jQuery plugin to enhance image maps.
             if (opts.wrapCss) {
                 $.extend(css, opts.wrapCss);
             }
-            // if we were rebinding with an existing wrapper, the image will aready be in it
+            // if we were rebinding with an existing wrapper, the image will already be in it
             if (img.parent()[0] !== me.wrapper[0]) {
 
                 img.before(me.wrapper);

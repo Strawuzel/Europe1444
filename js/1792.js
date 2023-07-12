@@ -151,12 +151,31 @@ const tooltips1792 = [
     }
 ];
 const globalMap = document.getElementById("globalMap");
+const wrapperClass = document.getElementsByClassName('wrapper');
 
+$(document).ready(function() {
+    $('#globalMap[usemap]').maphilight();
+
+
+    // Handle click event on the button
+    $('#timeline-button-1792').click(function() {
+        let newImage = 'rsc/images/1792/globalMap_1792.jpg';
+        $('#globalMap').attr('src', newImage);
+
+        $('#globalMap[usemap]').maphilight('destroy');
+
+        $('#globalMap[usemap]').maphilight();
+
+
+    });
+
+});
 timeLineButton.addEventListener("click", switchTimeline);
 
 function switchTimeline() {
     body.style.backgroundImage = "url(rsc/images/1792/background_1792_1.png)";
     globalMap.src = "/rsc/images/1792/globalMap_1792.jpg";
+
     map.innerHTML = "";
     mapAreas1792.forEach(area => {
         const areaItem = document.createElement("area");
