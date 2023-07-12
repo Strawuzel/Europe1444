@@ -3,14 +3,10 @@
     max-width: 80vw;
     padding: 1vw;
     background-color: gainsboro;
-    /*
-    background-image: url("");
-    */
     border-radius: 2vw;
     display: flex;
     justify-content: space-between;
     grid-auto-flow: column;
-    /*grid-gap: 2%;*/
 
 }
 #resultBar img {

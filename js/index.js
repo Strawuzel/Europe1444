@@ -1,43 +1,5 @@
 const tooltipsContainer = document.getElementById("tooltips-container");
 const toggleButton = document.getElementById("toggle-button");
-/*const questionArray = [
-    questionMuscovy = {
-        question: "Who was the ruler of Muscovy from 1462 to 1505 and expanded Muscovy's territory while challenging the authority of the Mongol-Tatar Golden Horde?",
-        answer: "Ivan the Great"
-    },
-    questionDenmark = {
-        question: "The Øresund strait, located between Denmark and Sweden,played a significant role in trade and maritime activities during the 15th century. Which toll was established by Denmark to collect revenue from ships passing through the Øresund?",
-        answer: "Sound Toll"
-    },
-    questionEngland = {
-        question: "Which conflict in England, spanning from 1455 to 1487, was fought between the rival houses of Lancaster and York for control of the English throne?",
-        answer: "Wars of the Roses"
-    },
-    questionFrance = {
-        question: "Who played a significant role in the Hundred Years' War, leading the French forces to several victories before being captured and executed?",
-        answer: "Joan of Arc"
-    },
-    questionCastile = {
-        question: "Who completed the Christian reconquest of the Iberian Peninsula by capturing the Emirate of Granada in 1492?",
-        answer: "Ferdinand II of Aragon"
-    },
-    questionBrandenburg = {
-        question: "Which ruling dynasty gained control over the Duchy of Brandenburg and established a strong influence in the region?",
-        answer: "Hohenzollern"
-    },
-    questionAustria = {
-        question: "Which ruling family consolidated their power in Austria during the 15th century?",
-        answer: "Habsburg"
-    },
-    questionPoland = {
-        question: "Which significant event in 1385 led to the personal union between Poland and the Grand Duchy of Lithuania?",
-        answer: "Union of Krewo"
-    },
-    questionOttoman = {
-        question: "Which major city did the Ottoman Empire capture in 1453, marking the end of the Byzantine Empire?",
-        answer: "Constantinople"
-    }
-];*/
 const tooltips = [
     {
         id: "Muscovy",
@@ -590,17 +552,15 @@ const mapAreas1444 = [
         name: "Ottoman"
     }
 ];
-
 const map = document.getElementById("map");
 const tooltipImages = document.getElementsByClassName("tooltip-image");
 const areas = map.getElementsByClassName("country-area");
-const questionButtons = document.getElementsByClassName("question-button");
+const answerButton = document.getElementsByClassName("answer-button");
 
+//create and render resultBar
 countryIcons1444.forEach(iconData => {
     const resultBar = document.getElementById("resultBar");
     const iconContainer = document.createElement("icon-container");
-    /*    iconContainer.setAttribute("title", iconData.title)
-        iconContainer.addEventListener("click", handleAreaClick)*/
     iconContainer.classList.add("icon-container");
 
     const imgElement = document.createElement("img");
@@ -610,17 +570,17 @@ countryIcons1444.forEach(iconData => {
     iconContainer.appendChild(imgElement);
     resultBar.appendChild(iconContainer);
 });
-
+//create and render area elements with values from object in array
 mapAreas1444.forEach(area => {
     const areaItem = document.createElement("area");
-    areaItem.setAttribute("title", area.name)
+    areaItem.setAttribute("title", area.name);
     areaItem.setAttribute("shape", "poly");
-    areaItem.setAttribute("coords", area.coords)
+    areaItem.setAttribute("coords", area.coords);
     areaItem.classList.add("country-area");
     map.appendChild(areaItem);
 })
 
-//forEach to render-tooltips in html
+//forEach to create tooltips and render in html
 tooltips.forEach((tooltip) => {
 
     const tooltipContainer = document.createElement("div");
@@ -658,10 +618,15 @@ tooltips.forEach((tooltip) => {
     tooltip.answers.forEach((answer, index) => {
         const answerButton = document.createElement("button");
         answerButton.id = tooltip.id +`-answer-${index + 1}`;
-        answerButton.classList.add("question-button");
+        answerButton.classList.add("answer-button");
         answerButton.textContent = answer;
         buttonContainer.appendChild(answerButton);
     });
+    //adds Eventlistener to every answerButton
+    Array.from(answerButton).forEach(button => {
+        button.addEventListener("click", handleAnswerButtonClick)
+    })
+
 
     //structure the html-tree
     tooltipContainer.appendChild(image);
@@ -672,7 +637,6 @@ tooltips.forEach((tooltip) => {
     questionContainer.appendChild(questionTitle);
     questionContainer.appendChild(questionText);
     questionContainer.appendChild(buttonContainer);
-
 
     tooltipsContainer.appendChild(tooltipContainer);
 });
@@ -697,11 +661,11 @@ function handleAreaClick(event) {
     showTooltip(tooltipTitle);
 }
 
-Array.from(questionButtons).forEach(button => {
-    button.addEventListener("click", handleQuestionClick)
-})
+/*Array.from(answerButton).forEach(button => {
+    button.addEventListener("click", handleAnswerButtonClick)
+})*/
 
-function handleQuestionClick(event) {
+function handleAnswerButtonClick(event) {
     const button = event.target;
     const buttonValue = event.target.innerHTML;
     checkAnswer(buttonValue, button)
@@ -767,7 +731,7 @@ function showTooltip(tooltipTitle) {
 
     //check if question-container is displayed. if true switch to text-container
     if (textContainer.style.display === "none") {
-        switchContent(question, textContainer)
+        switchDisplay(question, textContainer)
     }
     //switch style
     tooltipsContainer.style.display = "grid"
@@ -785,21 +749,21 @@ function showTooltip(tooltipTitle) {
     const tooltipHeight = tooltipsContainer.offsetHeight;
     const tooltipWidth = tooltipsContainer.offsetWidth;
     if (x + tooltipWidth > windowWidth) {
-        x = windowWidth - (tooltipWidth + 10)
+        x = windowWidth - (tooltipWidth + 15)
     }
     if (y + tooltipHeight > windowHeight) {
-        y = windowHeight - (tooltipHeight + 10)
+        y = windowHeight - (tooltipHeight + 15)
     }
     tooltipsContainer.style.left = x + "px";
     tooltipsContainer.style.top = y + "px";
 
 }
-
+//adds EventListener to every tooltipImg
 for (let i = 0; i < tooltipImages.length; i++) {
-    tooltipImages[i].addEventListener("click", handleImageClick);
+    tooltipImages[i].addEventListener("click", handleTooltipImageClick);
 }
-
-function handleImageClick(event) {
+//handels tooltip-switch-click
+function handleTooltipImageClick(event) {
     const imageID = event.target.getAttribute("id");
     let element, switchElement;
 
@@ -811,10 +775,10 @@ function handleImageClick(event) {
     }
     element = document.getElementById(element);
     switchElement = document.getElementById(switchElement);
-    switchContent(element, switchElement)
+    switchDisplay(element, switchElement)
 }
 
-function switchContent(element, switchElement) {
+function switchDisplay(element, switchElement) {
 
     if (switchElement.style.display === "grid") {
         switchElement.style.display = "none"

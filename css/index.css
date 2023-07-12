@@ -1,7 +1,7 @@
 html {
-    background-image: url("/rsc/images/1444/background.png");
+    background-image: url("/rsc/images/1444/background_copy.png");
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
     font-family: Arial, serif;
 }
 
@@ -13,11 +13,13 @@ body {
 
 h1 {
     color: goldenrod;
-    margin-top: 5vw;
-    margin-bottom: 5vw;
+    margin-top: 2.5vw;
+    margin-bottom: 2.5vw;
 
 }
-
+#map-container{
+display: flex;
+}
 .map {
     justify-content: center;
     position: relative;
@@ -109,12 +111,38 @@ img {
     display: none;
 }
 
+.timeline-button {
+    border-radius: 10%;
+    height: 3vw;
+    width: 7vw;
+    margin: 0 0.5vw;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: transparent;
+    justify-content: center;
+}
+.timeline-button img{
+    height: 100%;
+    width: 100%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#timeline-container {
+    margin-top: 1vw;
+    padding: 1vw;
+    display: flex;
+    justify-content: space-evenly;
+    grid-auto-flow: column;
+    position: fixed;
+    z-index: 1;
+
+}
+
 #toggle-button {
     background: transparent;
     grid-column: 2;
-}
-#timeline-button{
-
 }
 
 .tooltip-container {
@@ -138,7 +166,7 @@ button {
     background-color: transparent;
 }
 
-.question-button {
+.answer-button {
     background: transparent;
 }
 

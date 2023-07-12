@@ -1,4 +1,4 @@
-const timeLineButton = document.getElementById("timeline-button");
+const timeLineButton = document.getElementsByClassName("timeline-button-1792");
 const body = document.getElementsByTagName("body")
 const mapAreas1792 = [
     {
@@ -156,7 +156,7 @@ timeLineButton.addEventListener("click", switchTimeline);
 function switchTimeline() {
     Array.from(body).forEach(element => {
         console.log(element)
-        if (element.className !== "html-container" && element.className !== "map" && element.tagName !== "script") {
+        if (element.className !== "html-container" && element.className !== "map" && element.tagName !== "script" && element.className !== timeLineButton) {
             element.remove()
         }
     })
