@@ -155,7 +155,7 @@ const globalMap = document.getElementById("globalMap");
 timeLineButton.addEventListener("click", switchTimeline);
 
 function switchTimeline() {
-    body.style.backgroundImage = "url(rsc/images/1792/background_1792(1).png)";
+    body.style.backgroundImage = "url(rsc/images/1792/background_1792_1.png)";
     globalMap.src = "/rsc/images/1792/globalMap_1792.jpg";
     map.innerHTML = "";
     mapAreas1792.forEach(area => {
