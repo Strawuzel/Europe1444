@@ -64,7 +64,7 @@ img {
     z-index: 1;
 }
 
-#mapContainer {
+#map-container {
     border-radius: 3%;
     overflow: clip;
     position: relative;
@@ -72,7 +72,7 @@ img {
     margin-right: 30vw;
     margin-left: 1%;
     justify-content: center;
-
+    padding-bottom: 2vw;
 }
 
 #england-1444-img {

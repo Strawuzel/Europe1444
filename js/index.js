@@ -655,15 +655,12 @@ Array.from(areas).forEach(area => {
     area.addEventListener("click", handleAreaClick);
 });
 
+
 //get tooltipTitle from the event element and start showTooltip
 function handleAreaClick(event) {
     const tooltipTitle = event.target.getAttribute("title");
     showTooltip(tooltipTitle);
 }
-
-/*Array.from(answerButton).forEach(button => {
-    button.addEventListener("click", handleAnswerButtonClick)
-})*/
 
 function handleAnswerButtonClick(event) {
     const button = event.target;
