@@ -1,4 +1,4 @@
-const timeLineButton = document.getElementsByClassName("timeline-button-1792");
+const timeLineButton = document.getElementsByClassName("timeline-button");
 const body = document.getElementsByTagName("body")
 const mapAreas1792 = [
     {
@@ -151,8 +151,9 @@ const tooltips1792 = [
     }
 ];
 
-timeLineButton.addEventListener("click", switchTimeline);
+/*timeLineButton.addEventListener("click", switchTimeline);*/
 
+/*
 function switchTimeline() {
     Array.from(body).forEach(element => {
         console.log(element)
@@ -161,3 +162,4 @@ function switchTimeline() {
         }
     })
 }
+*/

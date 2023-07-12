@@ -1,14 +1,15 @@
 #resultBar {
-    margin-top: 1vw;
-    max-width: 80vw;
     padding: 1vw;
-    background-color: gainsboro;
-    border-radius: 2vw;
+    background-image: url("/rsc/images/map-background-transformed.png");
+    background-repeat: no-repeat;
+    background-size: 200%;
+    background-position: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
     display: flex;
-    justify-content: space-between;
-    grid-auto-flow: column;
-
 }
+
 #resultBar img {
     display: revert;
     max-width: 4vw;
@@ -17,6 +18,7 @@
     overflow: auto;
     flex: 1;
 }
+
 #resultBar img:hover {
     filter: grayscale(0%);
 }
