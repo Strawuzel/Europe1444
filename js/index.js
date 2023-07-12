@@ -557,6 +557,7 @@ const tooltipImages = document.getElementsByClassName("tooltip-image");
 const areas = map.getElementsByClassName("country-area");
 const answerButton = document.getElementsByClassName("answer-button");
 
+
 //create and render resultBar
 countryIcons1444.forEach(iconData => {
     const resultBar = document.getElementById("resultBar");

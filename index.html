@@ -6,15 +6,19 @@
     <link href="css/index.css" rel="stylesheet">
     <link href="css/resultBar.css" rel="stylesheet">
 </head>
-<body class="html-container">
+<body id="body" class="html-container">
 <h1 class="html-container">EUROPE 1444</h1>
 
 <div id="map-container" class="html-container">
     <div id="timeline-container" class="html-container">
-        <button id="timeline-button-1792" class="timeline-button"><img src="images/1792-button.png" alt="1792"></button>
-        <button id="timeline-button-1444" class="timeline-button"><img src="images/1444-button.png" alt="1444"></button>
+        <button id="timeline-button-1792" class="timeline-button">
+            <img src="images/1792-button.png" alt="1792">
+        </button>
+        <button id="timeline-button-1444" class="timeline-button">
+            <img src="images/1444-button.png" alt="1444">
+        </button>
     </div>
-    <img id="globalMap-1444-img" src="rsc/images/1444/globalMap1444.jpg" alt="Global" usemap="#map">
+    <img id="globalMap" src="rsc/images/1444/globalMap1444.jpg" alt="Global" usemap="#map">
     <map id="map" name="map" class="map"></map>
     <div id="resultBar" class="html-container"></div>
 </div>
@@ -24,11 +28,11 @@
 
 
 <script src="js/jQuery.js"></script>
-<script src="js/1792.js"></script>
 <script src="js/index.js"></script>
+<script src="js/1792.js"></script>
 <script src="js/jquery.rwdImageMaps.js"></script>
 <script src="js/mapHilight.js"></script>
-<script> $('#globalMap-1444-img').maphilight();</script>
+<script> $('#globalMap').maphilight();</script>
 <script> $('img[usemap]').rwdImageMaps();</script>
 </body>
 </html>
