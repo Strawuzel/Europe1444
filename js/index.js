@@ -478,39 +478,39 @@ const tooltips = [
 ];
 const countryIcons1444 = [
     {
-        src: "icons/130px-Shield_Muscovy.png",
+        src: "rsc/icons/Shield_Muscovy.png",
         title: "Muscovy"
     },
     {
-        src: "icons/130px-Shield_Denmark.png",
+        src: "rsc/icons/Shield_Denmark.png",
         title: "Denmark"
     },
     {
-        src: "icons/130px-Shield_England.png",
+        src: "rsc/icons/Shield_England.png",
         title: "England"
     },
     {
-        src: "icons/130px-Shield_France.png",
+        src: "rsc/icons/Shield_France.png",
         title: "France"
     },
     {
-        src: "icons/130px-Shield_Castile.png",
+        src: "rsc/icons/Shield_Castile.png",
         title: "Castile"
     },
     {
-        src: "icons/130px-Shield_Brandenburg.png",
+        src: "rsc/icons/Shield_Brandenburg.png",
         title: "Brandenburg"
     },
     {
-        src: "icons/130px-Shield_Austria.png",
+        src: "rsc/icons/Shield_Austria.png",
         title: "Austria"
     },
     {
-        src: "icons/130px-Shield_Poland.png",
+        src: "rsc/icons/Shield_Poland.png",
         title: "Poland"
     },
     {
-        src: "icons/130px-Shield_Ottomans.png",
+        src: "rsc/icons/Shield_Ottomans.png",
         title: "Ottoman"
     }
 ];
@@ -555,7 +555,6 @@ const mapAreas1444 = [
 const map = document.getElementById("map");
 const tooltipImages = document.getElementsByClassName("tooltip-image");
 const areas = map.getElementsByClassName("country-area");
-const answerButton = document.getElementsByClassName("answer-button");
 
 
 //create and render resultBar
@@ -568,6 +567,7 @@ countryIcons1444.forEach(iconData => {
     imgElement.src = iconData.src;
     imgElement.setAttribute("title", iconData.title)
     imgElement.addEventListener("click", handleAreaClick)
+    imgElement.setAttribute("id","shield");
     iconContainer.appendChild(imgElement);
     resultBar.appendChild(iconContainer);
 });
@@ -618,15 +618,14 @@ tooltips.forEach((tooltip) => {
     //create answer-buttons and place them in the buttonContainer
     tooltip.answers.forEach((answer, index) => {
         const answerButton = document.createElement("button");
-        answerButton.id = tooltip.id +`-answer-${index + 1}`;
+        answerButton.id = tooltip.id + `-answer-${index + 1}`;
         answerButton.classList.add("answer-button");
         answerButton.textContent = answer;
         buttonContainer.appendChild(answerButton);
+
+        //add Eventlistener to every answerButton
+        answerButton.addEventListener("click", handleAnswerButtonClick)
     });
-    //adds Eventlistener to every answerButton
-    Array.from(answerButton).forEach(button => {
-        button.addEventListener("click", handleAnswerButtonClick)
-    })
 
 
     //structure the html-tree
@@ -656,7 +655,6 @@ Array.from(areas).forEach(area => {
     area.addEventListener("click", handleAreaClick);
 });
 
-
 //get tooltipTitle from the event element and start showTooltip
 function handleAreaClick(event) {
     const tooltipTitle = event.target.getAttribute("title");
@@ -677,9 +675,8 @@ function checkAnswer(buttonValue, button) {
             colorButton(button, "green")
             setGrayScale(country)
             break;
-        }
-        else {
-            colorButton(button,"red")
+        } else {
+            colorButton(button, "red")
         }
     }
 
@@ -756,10 +753,12 @@ function showTooltip(tooltipTitle) {
     tooltipsContainer.style.top = y + "px";
 
 }
+
 //adds EventListener to every tooltipImg
 for (let i = 0; i < tooltipImages.length; i++) {
     tooltipImages[i].addEventListener("click", handleTooltipImageClick);
 }
+
 //handels tooltip-switch-click
 function handleTooltipImageClick(event) {
     const imageID = event.target.getAttribute("id");
