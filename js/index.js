@@ -566,6 +566,7 @@ countryIcons1444.forEach(iconData => {
     imgElement.src = iconData.src;
     imgElement.setAttribute("title", iconData.title)
     imgElement.addEventListener("click", handleAreaClick)
+    imgElement.setAttribute("id","shield");
     iconContainer.appendChild(imgElement);
     resultBar.appendChild(iconContainer);
 });
