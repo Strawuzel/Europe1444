@@ -1,4 +1,4 @@
-const timeLineButton = document.getElementsByClassName("timeline-button-1792");
+const timeLineButton = document.getElementById("timeline-button-1792");
 const body = document.getElementsByTagName("body");
 const mapAreas1792 = [
     {
@@ -99,7 +99,6 @@ const tooltips1792 = [
         tooltipText: "",
         imageUrl: "rsc/images/1792/spain_1792.jpg"
     },
-
     {
         tooltip: "prussia-tooltip",
         image: "prussia-1792-img",
