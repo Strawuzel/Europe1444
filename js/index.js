@@ -617,15 +617,14 @@ tooltips.forEach((tooltip) => {
     //create answer-buttons and place them in the buttonContainer
     tooltip.answers.forEach((answer, index) => {
         const answerButton = document.createElement("button");
-        answerButton.id = tooltip.id +`-answer-${index + 1}`;
+        answerButton.id = tooltip.id + `-answer-${index + 1}`;
         answerButton.classList.add("answer-button");
         answerButton.textContent = answer;
         buttonContainer.appendChild(answerButton);
+
+        //add Eventlistener to every answerButton
+        answerButton.addEventListener("click", handleAnswerButtonClick)
     });
-    //adds Eventlistener to every answerButton
-    Array.from(answerButton).forEach(button => {
-        button.addEventListener("click", handleAnswerButtonClick)
-    })
 
 
     //structure the html-tree
@@ -655,7 +654,6 @@ Array.from(areas).forEach(area => {
     area.addEventListener("click", handleAreaClick);
 });
 
-
 //get tooltipTitle from the event element and start showTooltip
 function handleAreaClick(event) {
     const tooltipTitle = event.target.getAttribute("title");
@@ -676,9 +674,8 @@ function checkAnswer(buttonValue, button) {
             colorButton(button, "green")
             setGrayScale(country)
             break;
-        }
-        else {
-            colorButton(button,"red")
+        } else {
+            colorButton(button, "red")
         }
     }
 
@@ -755,10 +752,12 @@ function showTooltip(tooltipTitle) {
     tooltipsContainer.style.top = y + "px";
 
 }
+
 //adds EventListener to every tooltipImg
 for (let i = 0; i < tooltipImages.length; i++) {
     tooltipImages[i].addEventListener("click", handleTooltipImageClick);
 }
+
 //handels tooltip-switch-click
 function handleTooltipImageClick(event) {
     const imageID = event.target.getAttribute("id");
