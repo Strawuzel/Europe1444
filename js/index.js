@@ -478,39 +478,39 @@ const tooltips = [
 ];
 const countryIcons1444 = [
     {
-        src: "/src/images/icons/130px-Shield_Muscovy.png",
+        src: "/icons/130px-Shield_Muscovy.png",
         title: "Muscovy"
     },
     {
-        src: "/src/images/icons/130px-Shield_Denmark.png",
+        src: "/icons/130px-Shield_Denmark.png",
         title: "Denmark"
     },
     {
-        src: "/src/images/icons/130px-Shield_England.png",
+        src: "/icons/130px-Shield_England.png",
         title: "England"
     },
     {
-        src: "/src/images/icons/130px-Shield_France.png",
+        src: "/icons/130px-Shield_France.png",
         title: "France"
     },
     {
-        src: "/src/images/icons/130px-Shield_Castile.png",
+        src: "/icons/130px-Shield_Castile.png",
         title: "Castile"
     },
     {
-        src: "/src/images/icons/130px-Shield_Brandenburg.png",
+        src: "/icons/130px-Shield_Brandenburg.png",
         title: "Brandenburg"
     },
     {
-        src: "/src/images/icons/130px-Shield_Austria.png",
+        src: "/icons/130px-Shield_Austria.png",
         title: "Austria"
     },
     {
-        src: "/src/images/icons/130px-Shield_Poland.png",
+        src: "/icons/130px-Shield_Poland.png",
         title: "Poland"
     },
     {
-        src: "/src/images/icons/130px-Shield_Ottomans.png",
+        src: "/icons/130px-Shield_Ottomans.png",
         title: "Ottoman"
     }
 ];
