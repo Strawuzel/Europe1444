@@ -17,10 +17,27 @@ h1 {
     color: goldenrod;
     margin-top: 2.5vw;
     margin-bottom: 2.5vw;
+}
+
+
+h3 {
+    display: flex;
+    justify-content: center;
+    margin-top: 0;
+    align-items: start;
+    font-size: xx-large;
 
 }
 
 #map-container {
+    border-radius: 3%;
+    overflow: clip;
+    position: relative;
+    margin-top: 3vw;
+    margin-right: 30vw;
+    margin-left: 1%;
+    justify-content: center;
+    margin-bottom: 2vw;
 }
 
 .map {
@@ -28,16 +45,18 @@ h1 {
     position: relative;
     z-index: 0;
 }
-
-h3 {
-    display: flex;
+.tooltip-image-container{
     justify-content: center;
-    align-items: start;
-    font-size: xx-large;
-    margin-top: 0;
-    margin-bottom: 0;
 }
 
+.tooltip-image-container h6{
+    transform: translate(-50%, -50%);
+    left: 25%;
+    z-index: 2;
+    color: gainsboro;
+    position: absolute;
+
+}
 #globalMap-1444-img {
     border-radius: 10%;
     display: flex;
@@ -66,17 +85,6 @@ img {
     position: absolute;
     border-radius: 3%;
     z-index: 1;
-}
-
-#map-container {
-    border-radius: 3%;
-    overflow: clip;
-    position: relative;
-    margin-top: 3vw;
-    margin-right: 30vw;
-    margin-left: 1%;
-    justify-content: center;
-    margin-bottom: 2vw;
 }
 
 #england-1444-img {
@@ -170,7 +178,8 @@ button {
     padding-bottom: 1vw;
     background-color: transparent;
 }
-#shield:hover{
+
+#shield:hover {
     cursor: pointer;
 }
 
@@ -203,9 +212,11 @@ h1 {
     display: flex;
     justify-content: center;
 }
-area:hover{
+
+area:hover {
     cursor: pointer;
 }
+
 body::-webkit-scrollbar-thumb {
     background-color: transparent;
 }

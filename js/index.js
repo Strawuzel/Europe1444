@@ -584,7 +584,9 @@ mapAreas1444.forEach(area => {
 tooltips.forEach((tooltip) => {
 
     const tooltipContainer = document.createElement("div");
+    const imageContainer = document.createElement("div");
     const image = document.createElement("img");
+    const imageHeading = document.createElement("h6");
     const questionContainer = document.createElement("div");
     const questionTitle = document.createElement("h3");
     const questionText = document.createElement("p");
@@ -597,6 +599,8 @@ tooltips.forEach((tooltip) => {
     tooltipContainer.id = tooltip.tooltip;
     image.classList.add("tooltip-image");
     image.id = tooltip.image;
+    imageContainer.classList.add("tooltip-image-container");
+    imageHeading.classList.add("tooltip-image-container");
     questionContainer.classList.add("tooltip");
     questionContainer.id = tooltip.question;
     questionTitle.classList.add("text");
@@ -613,6 +617,7 @@ tooltips.forEach((tooltip) => {
     questionText.textContent = tooltip.questionText;
     tooltipTitle.textContent = tooltip.tooltipTitle;
     tooltipText.innerHTML = tooltip.tooltipText;
+    imageHeading.textContent = "click me";
 
     //create answer-buttons and place them in the buttonContainer
     tooltip.answers.forEach((answer, index) => {
@@ -628,7 +633,9 @@ tooltips.forEach((tooltip) => {
 
 
     //structure the html-tree
-    tooltipContainer.appendChild(image);
+    tooltipContainer.appendChild(imageContainer);
+    imageContainer.appendChild(imageHeading)
+    imageContainer.appendChild(image);
     tooltipContainer.appendChild(textContainer);
     textContainer.appendChild(tooltipTitle);
     textContainer.appendChild(tooltipText);
