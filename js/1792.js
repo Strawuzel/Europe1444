@@ -38,6 +38,7 @@ const mapAreas1792 = [
         name: "Ottoman"
     }
 ];
+/*
 const tooltips1792 = [
     {
         tooltip: "russia-tooltip",
@@ -150,42 +151,34 @@ const tooltips1792 = [
         imageUrl: "rsc/images/1792/ottoman_1792.jpg"
     }
 ];
-const globalMap = document.getElementById("globalMap");
-const wrapperClass = document.getElementsByClassName('wrapper');
-
-$(document).ready(function() {
-    $('#globalMap[usemap]').maphilight();
+*/
+/*const globalMap = document.getElementById("globalMap");*/
 
 
-    // Handle click event on the button
-    $('#timeline-button-1792').click(function() {
-        let newImage = 'rsc/images/1792/globalMap_1792.jpg';
-        $('#globalMap').attr('src', newImage);
-
-        $('#globalMap[usemap]').maphilight('destroy');
-
-        $('#globalMap[usemap]').maphilight();
-
-
-    });
-
-});
 timeLineButton.addEventListener("click", switchTimeline);
 
 function switchTimeline() {
     body.style.backgroundImage = "url(rsc/images/1792/background_1792_1.png)";
-    globalMap.src = "/rsc/images/1792/globalMap_1792.jpg";
+    let map = document.getElementById("map"); // Use vanilla JavaScript to select the map element
+    map.innerHTML = ''; // Empty the map element
 
-    map.innerHTML = "";
+    $('#globalMap').on('load', function() {
+        console.log("New image loaded");
+        $('#map').maphilight(); // Use the jQuery selector to reapply maphilight
+    });
+
+    $('#globalMap').attr('src', 'rsc/images/1792/globalMap_1792.jpg');
     mapAreas1792.forEach(area => {
         const areaItem = document.createElement("area");
         areaItem.setAttribute("title", area.name);
         areaItem.setAttribute("shape", "poly");
         areaItem.setAttribute("coords", area.coords);
         areaItem.classList.add("country-area");
-        map.appendChild(areaItem);
+        map.appendChild(areaItem); // Use vanilla JavaScript to append the area element
     });
 }
+
+
 
 /*    Array.from(body).forEach(element => {
         console.log(element)
